@@ -18,7 +18,7 @@
 - ejecutar el comando: python enrich_musicbrainz.py
 
 # 4. Last.fm
-- Es necesario descargar el archivo comprimido "lastfm_subset.zip" de http://millionsongdataset.com/lastfm/#getting
+- Es necesario descargar el archivo comprimido "lastfm_subset.zip" de http://millionsongdataset.com/lastfm/#getting , debe hacer click en la pestaña "SUBSET".
 - ejecutar el comando: python enrich_lastfm.py
 
 # 5. AcousticBrainz
