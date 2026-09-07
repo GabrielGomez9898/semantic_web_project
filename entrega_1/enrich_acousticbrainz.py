@@ -13,8 +13,6 @@ Flujo:
      nos quedamos con offset == 0; si no existe, con el primero disponible.
   5. Hace el merge final y exporta el CSV enriquecido.
 
-Requisitos del sistema: zstd y tar deben estar disponibles en el PATH
-(en Mac: `brew install zstd` si no lo tienes; tar ya viene instalado).
 """
 
 import subprocess
@@ -80,7 +78,7 @@ def main():
     # -----------------------------------------------------------------
     # 3. Leer el tonal.csv en streaming desde el .tar.zst, filtrando
     # -----------------------------------------------------------------
-    print("Extrayendo y filtrando el dump de tonalidad (esto puede tardar)...")
+    print("Extrayendo y filtrando el dump de tonalidad ...")
 
     cmd = (
         f'zstd -dc "{TONAL_TAR_ZST}" | tar -xOf - "{TONAL_INNER_PATH}"'
@@ -147,10 +145,6 @@ def main():
     n_enriquecidas = final["key_key"].notna().sum()
     print(f"Canciones enriquecidas con tonalidad: {n_enriquecidas:,} de "
           f"{len(final):,}")
-
-    # Quitamos la columna mbid si no la quieres en el resultado final;
-    # coméntalo si prefieres conservarla como referencia.
-    # final = final.drop(columns=["mbid"])
 
     final.to_csv(OUTPUT_FILE, index=False)
     print(f"Listo. Archivo generado: {OUTPUT_FILE}")
