@@ -1,0 +1,118 @@
+@prefix res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> .
+@prefix rbo:  <http://uniandes.edu.co/wsproject2026/vocab/ontology#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# ----------------------------------- Definicion de las clases y subclases --------------- #
+res:Person rdf:type rdfs:Class ;
+    rdfs:label "persona"@es ;
+    rdfs:comment "Clase generica de persona."@es .
+
+res:CreativeWork rdf:type rdfs:Class ;
+    rdfs:label "creación"@es ;
+    rdfs:label "creative work"@en ;
+    rdfs:comment "Creación musical o artística."@es .
+
+res:GeographicalEntity rdf:type rdfs:Class ;
+    rdfs:label "entidad geográfica"@es ;
+    rdfs:label "geographical entity"@en ;
+    rdfs:comment "Entidad o lugar geografico."@es .
+
+res:Track rdf:type rdfs:Class ;
+    rdfs:label "cancion"@es ;
+    rdfs:label "song"@en ;
+    rdfs:comment "Cancion que pertenece a Million Songs."@es ;
+    rdfs:comment "Song that belongs to Million Songs."@en .
+
+res:Track rdf:subClassOf res:CreativeWork .
+
+res:Artist rdf:type rdfs:Class ;
+    rdfs:label "artista"@es ;
+    rdfs:label "artist"@en ;
+    rdfs:comment "Artista que creo por lo menos una cancion."@es ;
+    rdfs:comment "Artist thar created at least one song."@en .
+
+res:Artist rdf:subClassOf res:Person .
+
+res:Country rdf:type rdfs:Class ;
+    rdfs:label "pais"@es ;
+    rdfs:label "country"@en ;
+    rdfs:comment "Pais que hace parte del mundo."@es ;
+    rdfs:comment "Country that belongs to the world."@en .
+
+res:Country rdf:subClassOf res:GeographicalEntity .
+
+res:Tag rdf:type rdfs:Class ;
+    rdfs:label "etiqueta"@es ;
+    rdfs:label "tag"@en ;
+    rdfs:comment "Etiqueta utilizada para describir una canción."@es .
+
+# ----------------------------------- Definicion de propiedades (Dominios y Rangos)--------------- #
+
+rbo:createdBy rdf:type rdf:Property ;
+    rdfs:domain res:CreativeWork ;
+    rdfs:range res:Person .
+
+rbo:title rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:string .
+
+rbo:released rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:string .
+
+rbo:year rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:gYear .
+
+rbo:duration rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:double .
+
+rbo:lastfm_top_tag rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:string .
+
+rbo:lastfm_top_tag_score rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:double .
+
+
+rbo:hasTag rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range res:Tag .
+
+rbo:sungBy rdf:type rdf:Property ;
+    rdfs:subPropertyOf rbo:createdBy ;
+    rdfs:domain res:Track ;
+    rdfs:range res:Artist .
+
+rbo:gender rdf:type rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range xsd:string .
+
+rbo:artist_type rdf:type rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range xsd:string .
+
+rbo:origin rdf:type rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range res:Country .
+
+rbo:area rdf:type rdf:Property ;
+    rdfs:domain res:Country ;
+    rdfs:range xsd:string .
+
+rbo:key rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:string .
+
+rbo:keyScale rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:string .
+
+rbo:tuningFrequency rdf:type rdf:Property ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:double .
+
