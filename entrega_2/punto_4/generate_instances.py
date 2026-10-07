@@ -1,5 +1,5 @@
 import csv
-from rdflib import Graph, Namespace, Literal, RDF, RDFS, XSD
+from rdflib import Graph, Namespace, Literal, RDF, RDFS, XSD, BNode
 
 
 # ----------------------------------- Namespaces ----------------------------------- #
@@ -67,11 +67,14 @@ with open(
             ))
 
         if fila["lastfm_top_tag"]:
-            g.add((
-                track,
-                VOC.lastfm_top_tag,
-                Literal(fila["lastfm_top_tag"])
-            ))
+            g.add((track, VOC.lastfm_top_tag,
+                Literal(fila["lastfm_top_tag"])))
+
+            tag_name = fila["lastfm_top_tag"].replace(" ", "_")
+            tag = RES[f"Tag_{tag_name}"]
+
+            g.add((tag, RDF.type, RES.Tag))
+            g.add((track, VOC.hasTag, tag))
 
         if fila["lastfm_top_tag_score"]:
             g.add((
@@ -179,6 +182,54 @@ with open(
                 ))
 
 
+# ----------------------------------- Carga de canciones similares ----------------------------------- #
+
+with open(
+    "../../dataset/lastfm_similars.csv",
+    encoding="utf-8"
+) as archivo:
+
+    for fila in csv.DictReader(archivo):
+
+        track = RES[f"Track_{fila['track_id']}"]
+
+        similar_track = RES[f"Track_{fila['similar_track_id']}"]
+
+        similarity = BNode()
+
+        # El blank node representa la relación de similitud
+        g.add((
+            similarity,
+            RDF.type,
+            RES.Similarity
+        ))
+
+        # Track original -> relación de similitud
+        g.add((
+            track,
+            VOC.hasSimilarity,
+            similarity
+        ))
+
+        # Relación de similitud -> Track similar
+        g.add((
+            similarity,
+            VOC.similarTrack,
+            similar_track
+        ))
+
+        # Puntuación de similitud
+        if fila["similarity_score"]:
+            g.add((
+                similarity,
+                VOC.similarityScore,
+                Literal(
+                    fila["similarity_score"],
+                    datatype=XSD.double
+                )
+            ))
+
+
 # ----------------------------------- Verificación ----------------------------------- #
 
 tracks = list(
@@ -202,10 +253,18 @@ countries = list(
     )
 )
 
+similarities = list(
+    g.subjects(
+        RDF.type,
+        RES.Similarity
+    )
+)
+
 print("Número total de tripletas:", len(g))
 print("Tracks:", len(tracks))
 print("Artists:", len(artists))
 print("Countries:", len(countries))
+print("Similarities:", len(similarities))
 
 
 # ----------------------------------- Serialización ----------------------------------- #
