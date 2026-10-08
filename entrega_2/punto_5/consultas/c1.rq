@@ -1,0 +1,6 @@
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#>
+
+SELECT (COUNT(?track) AS ?totalTracks)
+WHERE {
+    ?track a res:Track .
+}
