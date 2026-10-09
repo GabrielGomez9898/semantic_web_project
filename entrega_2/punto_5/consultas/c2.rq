@@ -9,7 +9,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?artist ?track ?title
 WHERE {
     ?artist a res:Artist ;
-        rdfs:label "Nasty Savage"@en .
+            rbo:origin res:Country_US .
     ?track a res:Track .
     ?track rbo:sungBy ?artist .
     ?track rbo:title ?title .

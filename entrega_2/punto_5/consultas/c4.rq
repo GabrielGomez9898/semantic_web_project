@@ -6,11 +6,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-SELECT ?artist ?track ?title
+SELECT (COUNT(DISTINCT ?track) AS ?totalTracks)
 WHERE {
-    ?artist a res:Artist ;
-        rdfs:label "Nasty Savage"@en .
-    ?track a res:Track .
-    ?track rbo:sungBy ?artist .
-    ?track rbo:title ?title .
+    ?track rbo:hasSimilarity ?nb .
+    ?nb rbo:similarityScore 1 .
 }

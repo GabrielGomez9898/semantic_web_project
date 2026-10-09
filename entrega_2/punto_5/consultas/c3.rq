@@ -6,11 +6,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-SELECT ?artist ?track ?title
+SELECT ?track ?similarTrack
 WHERE {
-    ?artist a res:Artist ;
-        rdfs:label "Nasty Savage"@en .
-    ?track a res:Track .
-    ?track rbo:sungBy ?artist .
-    ?track rbo:title ?title .
+    ?artist a res:Artist .
+    ?track a res:Track ;
+            rbo:sungBy ?artist ;
+            rbo:hasSimilarity ?nb .
+    ?nb rbo:similarTrack ?similarTrack ;
+        rbo:similarityScore ?score .
+
+    FILTER(?score > 0.5)
 }
