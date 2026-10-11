@@ -284,7 +284,7 @@ res:Track rdfs:subClassOf [
 
 # Propiedad a partir de una cadena
 #Objetivo: Si una canción Track es cantada por un Artist, y ese Artist tiene como origen un Country, entonces la canción está asociada con ese Country mediante rbo:sungInCountry
-rbo:sungInCountry rdf:type rdf:Property ;
+rbo:sungInCountry a owl:ObjectProperty ;
     rdfs:domain res:Track ;
     rdfs:range res:Country .
 
