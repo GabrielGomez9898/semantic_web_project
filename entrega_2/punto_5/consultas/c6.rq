@@ -1,0 +1,21 @@
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> 
+PREFIX rbo: <http://uniandes.edu.co/wsproject2026/vocab/ontology#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+
+SELECT ?tag (COUNT(DISTINCT ?track) AS ?totalTracks)
+             (COUNT(DISTINCT ?artist) AS ?totalArtists)
+WHERE {
+    ?tag a res:Tag .
+    
+    ?track a res:Track ;
+           rbo:hasTag ?tag ;
+           rbo:sungBy ?artist .
+
+    ?artist a res:Artist .
+}
+GROUP BY ?tag
+HAVING (COUNT(DISTINCT ?artist) > 1)
+ORDER BY DESC(?totalArtists) DESC(?totalTracks)

@@ -1,0 +1,29 @@
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> 
+PREFIX rbo: <http://uniandes.edu.co/wsproject2026/vocab/ontology#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+
+
+SELECT ?labelArtist ?trackTitle ?labelArtist2 ?similarTrackTitle ?country ?score
+WHERE {
+    ?artist a res:Artist ;
+            rdfs:label ?labelArtist;
+            rbo:origin ?country .
+            
+    ?track a res:Track ;
+            rbo:title ?trackTitle ;
+            rbo:sungBy ?artist ;
+            rbo:hasSimilarity ?nb .
+    ?nb rbo:similarTrack ?similarTrack ;
+        rbo:similarityScore ?score .
+
+    ?artist2 a res:Artist ;
+            rdfs:label  ?labelArtist2 ;
+            rbo:origin ?country .
+    ?similarTrack a res:Track ;
+            rbo:title ?similarTrackTitle ;
+            rbo:sungBy ?artist2 .
+    FILTER(?score > 0.6)
+}

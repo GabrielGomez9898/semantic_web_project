@@ -6,8 +6,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-SELECT (COUNT(DISTINCT ?track) AS ?totalTracks)
+SELECT ?artist ?trackTitle ?similarTrackTitle ?score
 WHERE {
-    ?track rbo:hasSimilarity ?nb .
-    ?nb rbo:similarityScore 1 .
+    ?artist a res:Artist ;
+        rdfs:label "Soda Stereo"@en .
+    ?track a res:Track ;
+            rbo:title ?trackTitle ;
+            rbo:sungBy ?artist ;
+            rbo:hasSimilarity ?nb .
+    ?nb rbo:similarTrack ?similarTrack ;
+        rbo:similarityScore ?score .
+    ?similarTrack a res:Track ;
+            rbo:title ?similarTrackTitle .
 }

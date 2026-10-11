@@ -1,0 +1,20 @@
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> 
+PREFIX rbo: <http://uniandes.edu.co/wsproject2026/vocab/ontology#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+
+
+SELECT DISTINCT ?track ?creator
+WHERE {
+    ?track a res:Track .
+    {
+        ?track rbo:createdBy ?creator .
+    }
+    UNION
+    {
+        ?track rbo:sungBy ?creator .
+    }
+}
+LIMIT 20
