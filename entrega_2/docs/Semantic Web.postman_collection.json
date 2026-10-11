@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "cdb87779-eefd-45a2-beda-d696ab9467f9",
+		"name": "Semantic Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32891648"
+	},
+	"item": [
+		{
+			"name": "MusicBrainz",
+			"item": [
+				{
+					"name": "Get artist info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://musicbrainz.org/ws/2/artist/063ade09-299d-42b7-a041-1d8adcd5cad9?fmt=json",
+							"protocol": "https",
+							"host": [
+								"musicbrainz",
+								"org"
+							],
+							"path": [
+								"ws",
+								"2",
+								"artist",
+								"063ade09-299d-42b7-a041-1d8adcd5cad9"
+							],
+							"query": [
+								{
+									"key": "fmt",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proyecto",
+			"item": [
+				{
+					"name": "Cargar ontologia",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/turtle",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/Users/gabrielgomezcorredor/Desktop/Gabriel_Gomez/Maestria MISIS/Semantic Web/semantic_web_project/dataset/modelo_conceptual/ontology.ttl"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/music/data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"music",
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar cargue de ontologia",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/sparql-results+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "query",
+									"value": "PREFIX rbo: <http://uniandes.edu.co/wsproject2026/vocab/ontology#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nASK {\n    rbo:sungInCountry owl:propertyChainAxiom ?chain .\n}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3030/music/sparql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"music",
+								"sparql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargar instancias",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/turtle",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/Users/gabrielgomezcorredor/Desktop/Gabriel_Gomez/Maestria MISIS/Semantic Web/semantic_web_project/dataset/modelo_conceptual/instances.ttl"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/music/data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"music",
+								"data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
