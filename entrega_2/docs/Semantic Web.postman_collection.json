@@ -120,7 +120,7 @@
 							"urlencoded": [
 								{
 									"key": "query",
-									"value": "PREFIX rbo: <http://uniandes.edu.co/wsproject2026/vocab/ontology#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nASK {\n    rbo:sungInCountry owl:propertyChainAxiom ?chain .\n}",
+									"value": "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10",
 									"type": "text"
 								}
 							]
