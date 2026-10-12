@@ -1,0 +1,639 @@
+{
+  "artists": [
+    {
+      "artist_mbid": "f26c72d3-e52c-467b-b651-679c73d8e1a7",
+      "artist_name": "!!!",
+      "page_title": "!!!",
+      "source_url": "https://en.wikipedia.org/wiki/!!!",
+      "source_text": "!!! (\nCH(I)K CH(I)K CH(I)K), also known as Chk Chk Chk, is an American band from Sacramento, California. Formed in 1996 by lead singer Nic Offer, members of !!! came from other local bands such as the Yah Mos, Black Liquorice and Pope Smashers. !!! is composed of Mario Andreoni (guitar), Dan Gorman (horns/percussion/keys), Nic Offer (vocals), Rafael Cohen (bass/various electronic devices), Chris Egan (drums) and Meah Pace (vocals).\nVocalist and drummer John Pugh officially left the band in 2007 to concentrate on his new band Free Blood.\nVocalist Shannon Funchess stood in for Pugh during much of their 2007 tour. The band also shared membership with the similar, defunct group Out Hud (including Tyler Pope, who has played with LCD Soundsystem and written music for Cake).\nFollowing the release of Myth Takes in 2007,!!! continued to evolve their dance-punk sound with a series of albums, including Strange Weather, Isn't It? (2010), Thr!!!er (2013), As If (2015), Shake the Shudder (2017), Wallop (2019), and Let It Be Blue (2022). They are currently based in New York City.",
+      "facts": [
+        {
+          "relation": "plays_instrument",
+          "target_name": "guitar",
+          "evidence_quote": "Mario Andreoni (guitar)"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "bass",
+          "evidence_quote": "Rafael Cohen (bass/various electronic devices)"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "drums",
+          "evidence_quote": "Chris Egan (drums)"
+        }
+      ]
+    },
+    {
+      "artist_mbid": "3eb07038-66d7-4b61-961e-daca00e04985",
+      "artist_name": "!Bazz Feat. Siamak",
+      "page_title": "On Tiptoes",
+      "source_url": "https://en.wikipedia.org/wiki/On_Tiptoes",
+      "source_text": "On Tiptoes (Persian: پاورچین) is an Iranian television sitcom serial directed by Mehran Modiri. It was broadcast for the first time by the IRIB on Thursday 10 September 2002 until Thursday 10 January 2003. It could usually be seen every night at 8:00 p.m. Tehran time on Tehran TV, also known as Channel 5 in Iran. Later due to the popularity of the show, episodes were shown in syndication on various Iranian provincial channels as well as IRIB 1 & IRIB 2 for those living out of the country.\nShab-ha-ye Barareh is the prequel to On Tiptoes. Shabhaye Barareh is set in \"Barareh\" and describes Farhad's family more than fifty years ago. The series also has many of the cast members from other Modiri works such as Noghtechin and Jayezeye Bozorg. In On Tiptoes Modiri plays the role of \"Farhad\" and \"Shir Farhad\" (Farhad's father). In Shabhaye Barareh, Modiri is playing the younger version of \"Shir Farhad\". Shabhaye Barareh also feat\"Toghrol\", showing him to have had a military career in his youth, hence his strict behavior and attitude.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "8ab0741e-f59a-455c-98a3-21d1fbb6530c",
+      "artist_name": "#Poundsign#",
+      "page_title": "The Aislers Set",
+      "source_url": "https://en.wikipedia.org/wiki/The_Aislers_Set",
+      "source_text": "The Aislers Set is an American indie pop band that formed in San Francisco in 1997, after the breakup of chief songwriter Amy Linton's (currently goes by AV Linton or just Linton) former band Henry's Dress. The Aislers Set's music is often interpreted as adjacent to C86-style British indie pop. The founding members were AV Linton (guitar, vocals, multi-instrumentalist), Wyatt Cusick (guitar, vocals, multi-instrumentalist), Alicia Vanden Heuvel, (bass, vocals, piano, multi-instrumentalist), Yoshi Nakamoto (drums), and Jen Cohen (organ). The band was primarily active from 1998 to 2003, touring the U.S., Europe, and Japan, releasing three self-recorded albums, numerous singles and even recording a Peel Session in 2001.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "indie pop",
+          "evidence_quote": "The Aislers Set is an American indie pop band"
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "C86-style British indie pop",
+          "evidence_quote": "The Aislers Set's music is often interpreted as adjacent to C86-style British indie pop"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "guitar",
+          "evidence_quote": "AV Linton (guitar, vocals, multi-instrumentalist)"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "guitar",
+          "evidence_quote": "Wyatt Cusick (guitar, vocals, multi-instrumentalist)"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "bass",
+          "evidence_quote": "Alicia Vanden Heuvel, (bass, vocals, piano, multi-instrumentalist)"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "drums",
+          "evidence_quote": "Yoshi Nakamoto (drums)"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "organ",
+          "evidence_quote": "Jen Cohen (organ)"
+        }
+      ]
+    },
+    {
+      "artist_mbid": "cbeec698-9c3e-4ba5-a5ab-6837fe618c2b",
+      "artist_name": "$jammie the Money",
+      "page_title": "Atlanta Falcons",
+      "source_url": "https://en.wikipedia.org/wiki/Atlanta_Falcons",
+      "source_text": "The Atlanta Falcons are a professional American football team based in Atlanta. The Falcons compete in the National Football League (NFL) as a member of the National Football Conference (NFC) South division. The Falcons were founded on June 30, 1965, and joined the NFL in 1966 as an expansion team, after the NFL offered then-owner Rankin Smith a franchise to keep him from joining the rival American Football League (AFL).\nIn their 59 years of existence, the Falcons have compiled a record of 398–512–6 (398–512–6 in the regular season and 10–14 in the playoffs), winning division championships in 1980, 1998, 2004, 2010, 2012, and 2016. The Falcons have appeared in two Super Bowls, the first during the 1998 season in Super Bowl XXXIII, where they lost to the Denver Broncos 34–19, and the second 18 years later, a 34–28 overtime loss to the New England Patriots in Super Bowl LI. They are the oldest major professional sports team in America with no championships.\nThe Falcons' current home field is Mercedes-Benz Stadium, which opened for the 2017 season; the team's headquarters and practice facilities are located at a 50-acre (20 ha) site in Flowery Branch, northeast of Atlanta in Hall County.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "284460fc-c58a-4214-b81c-299a66bbd786",
+      "artist_name": "& And Oceans",
+      "page_title": "...And Oceans",
+      "source_url": "https://en.wikipedia.org/wiki/...And_Oceans",
+      "source_text": "...And Oceans, previously Havoc Unit and Festerday, is a Finnish metal band. It was formed in 1989 as a death metal band but changed to symphonic black metal. It released its first album as ...and Oceans in 1998. In the following years, it pursued a less traditional, more industrial-oriented direction.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "metal",
+          "evidence_quote": "...And Oceans, previously Havoc Unit and Festerday, is a Finnish metal band."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "death metal",
+          "evidence_quote": "It was formed in 1989 as a death metal band but changed to symphonic black metal."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "symphonic black metal",
+          "evidence_quote": "It was formed in 1989 as a death metal band but changed to symphonic black metal."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "industrial",
+          "evidence_quote": "In the following years, it pursued a less traditional, more industrial-oriented direction."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "9c1ff574-2ae4-4fea-881f-83293d0d5881",
+      "artist_name": "...And You Will Know Us By The Trail Of Dead",
+      "page_title": "...And You Will Know Us by the Trail of Dead",
+      "source_url": "https://en.wikipedia.org/wiki/...And_You_Will_Know_Us_by_the_Trail_of_Dead",
+      "source_text": "...And You Will Know Us by the Trail of Dead (often abbreviated as Trail of Dead), are an American alternative rock band from Austin, Texas, formed in 1994. The band's earliest stable lineup consisted of Conrad Keely, Jason Reece, Kevin Allen and Neil Busch, though for most of the band's history Keely and Reece were the core members with other musicians serving for varying lengths of time. Trail of Dead had a cult following and were known for their energetic and protracted live performances. Between 1998 and 2023, the band released eleven studio albums and five EPs along with one live album and twenty-two singles. The artwork for all of the albums was created by Keely (who is also a painter) using various media. This artwork has recurring mythical and historical themes.\nTheir latest studio album, XI: Bleed Here Now, was released on July 15, 2022. In February 2023, the band posted on Instagram an image reading \"Trail closed\" which created rumours that the band had broken up. Although the band still exists, Conrad Keely later clarified they had no immediate plans to either tour nor make any more music in the traditional sense, citing a disastrous final tour, exhaustion, and the inhospitable state of the music industry towards smaller bands as the main drivers behind their decision.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "b0d6108a-3dd5-479d-b518-803f54b3ba45",
+      "artist_name": "1 Mile North",
+      "page_title": "1 Mile North",
+      "source_url": "https://en.wikipedia.org/wiki/1_Mile_North",
+      "source_text": "1 Mile North is an ambient / post-rock duo, consisting of guitarist Jon Hills and keyboardist Mark Bajuk.",
+      "facts": [
+        {
+          "relation": "plays_instrument",
+          "target_name": "guitar",
+          "evidence_quote": "consisting of guitarist Jon Hills"
+        }
+      ]
+    },
+    {
+      "artist_mbid": "2fc659fa-293f-4288-bff5-29447f31f628",
+      "artist_name": "1. Futurologischer Congress",
+      "page_title": "Lars Taylor",
+      "source_url": "https://en.wikipedia.org/wiki/Lars_Taylor",
+      "source_text": "Lars Rainer Rüetschi (born March 24, 1977), professional known as Lars Taylor, is a Swiss fusion guitarist, composer, and producer. He has collaborated with many notable musicians and Grammy Award winners, including Donny McCaslin, Mark Soskin, Paul Brown, and Bob Glaub.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "fusion",
+          "evidence_quote": "Lars Taylor, is a Swiss fusion guitarist, composer, and producer."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "7373764f-c642-4393-9492-97b5622c4bce",
+      "artist_name": "1.000 Mexicans",
+      "page_title": "Vehicle registration plates of Mexico",
+      "source_url": "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Mexico",
+      "source_text": "Vehicle registration plates of Mexico are issued with unique visual designs by each state, but with a single national numbering system, such that serials are not duplicated in multiple states. Most states change designs approximately every three years, with each state having its own plate replacement cycle. Every year, owners of Mexican-registered vehicles pay the tenencia or revalidación de placas (car plates renewal tax). A set of Mexican plates includes one pair of plates, a windshield sticker, and in some states a plate sticker. The international code for Mexico is \"MEX\".",
+      "facts": []
+    },
+    {
+      "artist_mbid": "00077d46-7b4a-4761-9eed-c7dd435fa5ff",
+      "artist_name": "'68 Comeback",
+      "page_title": "'68 Comeback",
+      "source_url": "https://en.wikipedia.org/wiki/%2768_Comeback",
+      "source_text": "'68 Comeback is an American garage rock band formed in Memphis, Tennessee, in 1992 by singer, songwriter, and musicologist Jeffrey Evans. For the purposes of the band, Evans is frequently billed as either \"Monsieur Evans\" or \"Monsieur Jeffrey Evans\". The group contains a revolving cast of musicians, the only constant member being Evans himself.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "8cf8869d-e066-4c94-b734-fe05749badf0",
+      "artist_name": "'Til Tuesday",
+      "page_title": "'Til Tuesday",
+      "source_url": "https://en.wikipedia.org/wiki/%27Til_Tuesday",
+      "source_text": "'Til Tuesday was an American new wave band formed in Boston, Massachusetts, United States. The band, consisting of Aimee Mann (lead vocals, bass), Robert Holmes (guitar), Joey Pesce (keyboards), and Michael Hausman (drums), was active from 1982 to 1989. They are best known for their 1985 hit single \"Voices Carry\". 'Til Tuesday disbanded in 1990 when Mann left to begin a solo career.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "new wave",
+          "evidence_quote": "'Til Tuesday was an American new wave band formed in Boston, Massachusetts, United States."
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "bass",
+          "evidence_quote": "The band, consisting of Aimee Mann (lead vocals, bass)"
+        }
+      ]
+    },
+    {
+      "artist_mbid": "9cee75f3-0459-422e-ab8d-f3cc5ff4f96b",
+      "artist_name": "'t Hof Van Commerce",
+      "page_title": "'t Hof van Commerce",
+      "source_url": "https://en.wikipedia.org/wiki/%27t_Hof_van_Commerce",
+      "source_text": "'t Hof van Commerce is a Belgian hip hop crew from Izegem in the province West Flanders in Flanders, the Dutch-speaking part of Belgium. Their name means 'commercial court' in their local dialect. Almost all their raps/lyrics are in West Flemish, the Dutch dialect of the province of West Flanders, with the exception of some lines sung in Limburgish by DJ 4T4 or a mix between those two dialects.\nBand members are Filip Cauwelier, Serge Buyse and Kristof Michiels. Ex-members include Johnny de Pony (a.k.a. Georges De Keesmaecker) and Floerke den Aap (a.k.a. Wilhelm De Tura).",
+      "facts": []
+    },
+    {
+      "artist_mbid": "d37f65cb-bb8d-47e6-9aaf-2e125972a4d1",
+      "artist_name": "(((eco)))",
+      "page_title": "Eco",
+      "source_url": "https://en.wikipedia.org/wiki/Eco",
+      "source_text": "The word eco may refer to ecology or economics. The word, or the initials E.C.O., may also refer to:",
+      "facts": []
+    },
+    {
+      "artist_mbid": "b6553107-4d02-4248-982b-354cca3b1cfe",
+      "artist_name": "*Shels",
+      "page_title": "*shels",
+      "source_url": "https://en.wikipedia.org/wiki/*shels",
+      "source_text": "*shels is a British-American rock group, formed in 2003. The band have been described as a supergroup of the British underground music scene, as they have, at various times, featured former members of bands including Mahumodo, Eden Maine and Fireapple Red.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "7b28fb58-882b-4907-856e-ef327b624b11",
+      "artist_name": "+ / - {Plus/Minus}",
+      "page_title": "Plus and minus signs",
+      "source_url": "https://en.wikipedia.org/wiki/Plus_and_minus_signs",
+      "source_text": "The plus sign (+) and the minus sign (−) are mathematical symbols used to denote positive and negative functions, respectively. In addition, the symbol + represents the operation of addition, which results in a sum, while the symbol − represents subtraction, resulting in a difference. Their use has been extended to many other meanings, more or less analogous. Plus and minus are Latin terms meaning 'more' and 'less', respectively.\nThe forms + and − are used in many countries around the world. Other designs include U+FB29 ﬩ HEBREW LETTER ALTERNATIVE PLUS SIGN for plus and U+2052 ⁒ COMMERCIAL MINUS SIGN for minus.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "c2a44e93-3a2b-44aa-bd8b-7a71bb76e3b5",
+      "artist_name": "+44",
+      "page_title": "Telephone numbers in the United Kingdom",
+      "source_url": "https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom",
+      "source_text": "In the United Kingdom and the Crown Dependencies, telephone numbers are administered by the Office of Communications (Ofcom). For this purpose, Ofcom established a telephone numbering plan, known as the National Telephone Numbering Plan, which is the system for assigning telephone numbers to subscriber stations.\nTelephone numbers are of variable length. Local numbers are supported from landlines. Numbers can be dialled with a '0'-lead prefix that denotes either a geographical region or another service. Mobile phone numbers have distinct prefixes that are not geographic, and are portable between providers.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "1b8e842e-34d1-4446-a969-e41765bb16ac",
+      "artist_name": "-123min.",
+      "page_title": "Hello",
+      "source_url": "https://en.wikipedia.org/wiki/Hello",
+      "source_text": "Hello is a salutation or greeting in the English language. It is first attested in writing from 1826.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "763ec186-ae67-4678-be3c-94f0d293f405",
+      "artist_name": "10 Second Drop",
+      "page_title": "Drop (film)",
+      "source_url": "https://en.wikipedia.org/wiki/Drop_(film)",
+      "source_text": "Drop is a 2025 American mystery thriller film directed by Christopher Landon and written by Jillian Jacobs and Chris Roach. It stars Meghann Fahy, Brandon Sklenar, Violett Beane, and Jeffery Self. In the film, a widowed mother receives threatening messages during her first date in years, which causes her to question her date and fear for her safety.\nDrop had its premiere at the SXSW on March 9, 2025, and was released in the United States by Universal Pictures on April 11, 2025. The film received generally positive reviews from critics and grossed $28 million worldwide.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "b18bc9c4-6f22-4f1b-a918-e9c86a39fe7a",
+      "artist_name": "10 Years",
+      "page_title": "10 years",
+      "source_url": "https://en.wikipedia.org/wiki/10_years",
+      "source_text": "10 Years or Ten Years may refer to:\n\nDecade, a period of ten years",
+      "facts": []
+    },
+    {
+      "artist_mbid": "2052937a-48e8-4c0f-ab2f-79a75137d304",
+      "artist_name": "100 Folk Celsius",
+      "page_title": "Banks of the Ohio",
+      "source_url": "https://en.wikipedia.org/wiki/Banks_of_the_Ohio",
+      "source_text": "\"Banks of the Ohio\" (Roud 157, Laws F5), also known as \"Down on the Banks of the Ohio\" and \"I'll Never Be Yours\", is a 19th-century murder ballad, written by unknown authors. The lyrics tell of \"Willie\" who invites his young lover for a walk during which she rejects his marriage proposal, and once they are alone on the river bank, he murders the young woman. \nThe song was first recorded by country musicians such as Clarence Horton Greene in 1927, and has been performed by many country and folk singers since. Olivia Newton-John released a version in 1971 and her recording reached No. 1 in Australia and No. 6 in the UK.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "country",
+          "evidence_quote": "The song was first recorded by country musicians such as Clarence Horton Greene in 1927, and has been performed by many country and folk singers since."
+        },
+        {
+          "relation": "collaborated_with",
+          "target_name": "Olivia Newton-John",
+          "evidence_quote": "Olivia Newton-John released a version in 1971 and her recording reached No. 1 in Australia and No. 6 in the UK."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "5c176092-cb4d-4e05-806b-1e9414f2b28c",
+      "artist_name": "101 Strings Orchestra",
+      "page_title": "101 Strings",
+      "source_url": "https://en.wikipedia.org/wiki/101_Strings",
+      "source_text": "101 Strings Orchestra was the brand for a highly successful easy listening symphonic music organization, with a discography exceeding 150 albums over 24 years, beginning in 1957. 101 Strings had a trademark sound, focusing on melody with a laid-back ambiance most often featuring strings. Its LPs were individualized by the slogan \"The Sound of Magnificence\", a puffy cloud logo and a sepia-toned photo of the orchestra. The 101 Strings orchestra included 124 string instruments and was initially conducted by Wilhelm Stephan. The orchestra's famous official photograph was taken in the Musikhalle Hamburg.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "7f0c252a-bd45-4fe0-b306-478eeb07b97b",
+      "artist_name": "108",
+      "page_title": "108",
+      "source_url": "https://en.wikipedia.org/wiki/108",
+      "source_text": "108 may refer to:\n\n108 (number), the natural number following 107 and preceding 109\nAD 108, a year\n108 BC, a year\n108 (artist) (born 1978), Italian street artist\n108 (band), an American hardcore band\n108 (emergency telephone number), an emergency telephone number in several states in India\n108 (Lost)\nRoute 108 (MBTA), a bus route in Massachusetts, US\n108 (New Jersey bus), a bus route in Newark, New Jersey, US\nPeugeot 108, a city car.\n108 Heroes, the famous set of outlaws from Water Margin\n108 Hecuba, a main-belt asteroid\nAustralia 108, largest building in Australia excluding structures above the roof.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "03da4d85-8786-4814-8118-6849dc5232da",
+      "artist_name": "1090 Club",
+      "page_title": "Burning at Both Ends",
+      "source_url": "https://en.wikipedia.org/wiki/Burning_at_Both_Ends",
+      "source_text": "Burning at Both Ends is the third studio album by American pop punk band Set Your Goals. Recording for the album began in  October and November 2010 with producer Brian McTernan in Baltimore, Maryland. The group took a break to support You Me at Six on their UK tour in December; they were unable to fly back until the end of the month due to bad weather to finish the album. The sessions resumed and ran in to mid-January when the band ran out of studio time. They briefly tracked with second producer Mike Green in Los Angeles, California. Following recording, the band embarked on two US tours, one supporting Parkway Drive and the other alongside August Burns Red.\nLeading up to the album's release announcement, \"Start the Reactor\" and \"Exit Summer\" were made available for streaming, and \"Certain\" served as the first single. Burning at Both Ends was released through independent label Epitaph Records in June 2011. A stint on the Warped Tour and performances at the Australian Soundwave Counter-Revolution festival followed. The band continued touring the US until the end of the year with two supporting slots for New Found Glory and Four Year Strong, and a separate headlining tour soon after. Shows in South America and festival appearances preceded a 2012 co-headlining US tour with Cartel and a UK tour. Following this, \"Product of the 80's\" was released as a single in June.\nDescribed as a melodic hardcore and pop punk record, Burning at Both Ends has a slower tempo than the group's previous albums. It peaked at number 165 on the Billboard 200 and charted on the Billboard component charts—Independent Albums and Top Rock Albums. Burning at Both Ends received a favourable response from critics, although some noted the lack of energy and tempo. Dead Press! included the album on a pop punk best-of list.",
+      "facts": [
+        {
+          "relation": "produced_by",
+          "target_name": "Mike Green",
+          "evidence_quote": "They briefly tracked with second producer Mike Green in Los Angeles, California."
+        },
+        {
+          "relation": "associated_genre",
+          "target_name": "pop punk",
+          "evidence_quote": "Burning at Both Ends is the third studio album by American pop punk band Set Your Goals."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "b9a06530-1241-4162-836f-7b8e79deaa58",
+      "artist_name": "10_000 Maniacs",
+      "page_title": "10,000 Maniacs",
+      "source_url": "https://en.wikipedia.org/wiki/10,000_Maniacs",
+      "source_text": "10,000 Maniacs is an American alternative rock band founded in 1981. They have released nine studio albums, six EPs, and five live albums. They achieved their most significant success between 1987 and 1993, when they released four albums that charted in the top 50 in the US: In My Tribe (1987), Blind Man's Zoo (1989), Our Time in Eden (1992), and the live album MTV Unplugged (1993). After the recording (but before the release) of MTV Unplugged, original lead singer and songwriter Natalie Merchant left the band to pursue a solo career, while the remaining members continued the band.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "f37c537b-3557-4031-bfd6-ab63ced32854",
+      "artist_name": "10cc",
+      "page_title": "10cc",
+      "source_url": "https://en.wikipedia.org/wiki/10cc",
+      "source_text": "10cc are  an English rock band formed in 1972 by four musicians who had written and recorded together at their own studio, Strawberry Studios, in Stockport near Manchester since 1968. The group initially consisted of Graham Gouldman, Eric Stewart, Kevin Godley, and Lol Creme. The four members contributed to songwriting, working together in various permutations. Godley and Creme’s songwriting has been said to be inspired by art and cinema. The four members were multi-instrumentalists, singers, writers and producers. Most of the band's records were recorded at their own Strawberry Studios (North) in Stockport and Strawberry Studios (South) in Dorking, with the majority of those engineered by Stewart.\nFrom 1972 to 1978, 10cc had five consecutive UK top-ten albums: Sheet Music (1974), The Original Soundtrack (1975), How Dare You! (1976), Deceptive Bends (1977), and Bloody Tourists (1978). 10cc had twelve singles reach the UK Top 40, three of which were chart-toppers \"Rubber Bullets\" (1973), \"I'm Not in Love\" (1975), and \"Dreadlock Holiday\" (1978). \"I'm Not in Love\" was their breakthrough worldwide hit and is known for its innovative backing track. \nIn 1976, Godley and Creme left 10cc to concentrate on developing an electronic music device, \"The Gizmo\", and being in video production and music as a duo. Stewart left the band in 1995, after which they did not record or release any further studio albums. Since 1999, Gouldman has led a touring version of 10cc.",
+      "facts": [
+        {
+          "relation": "produced_by",
+          "target_name": "Eric Stewart",
+          "evidence_quote": "the majority of those engineered by Stewart."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "d998c613-a715-48b9-87a3-df7598056f8c",
+      "artist_name": "11/5",
+      "page_title": "11/5",
+      "source_url": "https://en.wikipedia.org/wiki/11/5",
+      "source_text": "11/5 was an American hip hop group from the Hunters Point section of San Francisco, California whose members were Maine-O, Hennessy and Taydatay, they were signed to Dogday Records, and were active from 1994 to 2001.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "hip hop",
+          "evidence_quote": "11/5 was an American hip hop group"
+        },
+        {
+          "relation": "produced_by",
+          "target_name": "Dogday Records",
+          "evidence_quote": "they were signed to Dogday Records"
+        }
+      ]
+    },
+    {
+      "artist_mbid": "9132d515-dc0e-4494-85ae-20f06eed14f9",
+      "artist_name": "112",
+      "page_title": "112",
+      "source_url": "https://en.wikipedia.org/wiki/112",
+      "source_text": "112 may refer to:\n\n112 (number), the natural number following 111 and preceding 113\n112 (emergency telephone number), the standard emergency phone number in the European Union and on GSM cellphones\n112 (band), an R&B quartet from Atlanta, Georgia, United States\n112 (album), album from the band of the same name\n112 BC, a year\nAD 112, a year of the Julian calendar\nRoute 112 (MBTA), a bus route in Massachusetts, United States\n112 (New Jersey bus)\nKFM 112M aircraft engine\nThai Criminal Code section 112, forbidding lèse-majesté in Thailand\n112 Iphigenia, a main-belt asteroid",
+      "facts": []
+    },
+    {
+      "artist_mbid": "32dc3f24-253c-47ef-9f7c-157f8442f4a6",
+      "artist_name": "113",
+      "page_title": "113",
+      "source_url": "https://en.wikipedia.org/wiki/113",
+      "source_text": "113 may refer to:\n\n113 (number), the natural number following 112 and preceding 114\nAD 113, a year\n113 BC, a year\n113 (band), a French hip hop group\n113 (New Jersey bus), Ironbound Garage in Newark and run to and from the Port Authority bus route\n113 Amalthea, a main-belt asteroid",
+      "facts": []
+    },
+    {
+      "artist_mbid": "2a45629f-d6fc-4be0-8f5b-b7f168618379",
+      "artist_name": "12 Gauge",
+      "page_title": "Gauge (firearms)",
+      "source_url": "https://en.wikipedia.org/wiki/Gauge_(firearms)",
+      "source_text": "A gauge (in American English; known as a bore in Commonwealth English) of a firearm is a unit of measurement used to express the inner diameter (bore diameter) and other necessary parameters to define in general a smoothbore barrel (compare to caliber, which defines a barrel with rifling and its cartridge).\nThe gauge of a shotgun is a list that includes all necessary data to define a functional barrel. For example, the dimension of the chamber, the shotgun bore dimension, the valid proof load, and commercial ammunition, as defined globally by the C.I.P.; defined in Great Britain by the Rules, regulations and scales applicable to the proof of small arms (2006) of The London Proof House and The Birmingham Proof House, as referred in the Gun Barrel Proof Act 1978, Paragraph 6; and defined in the United States by SAAMI Z299.2 – 2019.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "6f81a7dc-be31-4498-ae95-6d994ffec614",
+      "artist_name": "12 Stones",
+      "page_title": "12 Stones",
+      "source_url": "https://en.wikipedia.org/wiki/12_Stones",
+      "source_text": "12 Stones is an American rock band formed in 2000 in Mandeville, Louisiana, consisting of Paul McCoy, Jon Rodriguez, Ty Del Rose and Christopher Colt.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "582c15e8-0f6b-4462-9796-85bae34173b8",
+      "artist_name": "120 Days",
+      "page_title": "The 120 Days of Sodom",
+      "source_url": "https://en.wikipedia.org/wiki/The_120_Days_of_Sodom",
+      "source_text": "The 120 Days of Sodom, or the School of Libertinage (French: Les 120 Journées de Sodome ou l'école du libertinage) is an unfinished novel by the French writer and nobleman Donatien Alphonse François, Marquis de Sade, written in 1785 and published in 1904 after its manuscript was rediscovered. It describes the activities of four wealthy libertine Frenchmen who spend four months seeking the ultimate sexual gratification through orgies, sealing themselves in an inaccessible castle in the heart of the Black Forest with 12 accomplices, 20 designated victims and 10 servants. Four aging prostitutes relate stories of their most memorable clients whose sexual practices involved 600 \"passions\" including coprophilia, necrophilia, bestiality, incest, rape, and child sexual abuse. The stories inspire the libertines to engage in acts of increasing violence leading to the torture and murder of their victims, most of whom are adolescents and young women.\nThe novel survives only in draft form. Its introduction and first part were written according to Sade's detailed plan, but the subsequent three parts are mostly in the form of notes. Sade wrote it in secrecy while imprisoned in the Bastille. When the fortress was stormed by revolutionaries on 14 July 1789, Sade believed the manuscript had been lost. However, it had been found and preserved without his knowledge and was eventually published in a restricted edition in 1904 for its scientific interest to sexologists. The novel was banned as pornographic in France and English-speaking countries before becoming more widely available in commercial editions in the 1960s. It was published in the prestigious French Pléiade edition in 1990 and a new English translation was published as a Penguin Classic in 2016.\nThe novel attracted increasing critical interest after World War II. In 1957, Georges Bataille said it \"towers above all other books in that it represents man's fundamental desire for freedom that he is obliged to contain and keep quiet\". Critical opinion, however, remains divided. Neil Schaeffer calls it \"one of the most radical, one of the most important novels ever written\", whereas for Laurence Louis Bongie it is \"an unending mire of permuted depravities\".",
+      "facts": []
+    },
+    {
+      "artist_mbid": "bf346e67-b4b1-41c0-bcc7-a8f4df4fbbbb",
+      "artist_name": "1200 Micrograms",
+      "page_title": "GMS (duo)",
+      "source_url": "https://en.wikipedia.org/wiki/GMS_(duo)",
+      "source_text": "GMS (also known as the Growling Mad Scientists) are a Dutch psychedelic trance duo which have attained significant popularity, beginning in the early 1990s. Formed by Shajahan Matkin (also known as Riktam) and Joseph Quinteros (also known as Bansi) in the city of Amsterdam, located in the west of The Netherlands, the duo has attracted a large international fanbase. GMS founded Spun Records in 1999, the first psychedelic trance label in the United States and Ibiza, Spain.\nIn 2008, GMS left Spun Records  to further concentrate on their own careers and had created in 2009 a new label to release all of their music from their own various bands called Starbox Music.\nThey have sold over 350,000 copies worldwide. Director Tony Scott used GMS tracks in his films Man on Fire, Domino and Unstoppable.\nGMS won the Psy-Trance award twice (in 2001 and 2009) at the DJ Awards in Ibiza, Spain.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "psychedelic trance",
+          "evidence_quote": "GMS (also known as the Growling Mad Scientists) are a Dutch psychedelic trance duo"
+        },
+        {
+          "relation": "produced_by",
+          "target_name": "Spun Records",
+          "evidence_quote": "GMS founded Spun Records in 1999, the first psychedelic trance label in the United States and Ibiza, Spain."
+        },
+        {
+          "relation": "produced_by",
+          "target_name": "Starbox Music",
+          "evidence_quote": "had created in 2009 a new label to release all of their music from their own various bands called Starbox Music."
+        },
+        {
+          "relation": "associated_genre",
+          "target_name": "Psy-Trance",
+          "evidence_quote": "GMS won the Psy-Trance award twice (in 2001 and 2009) at the DJ Awards in Ibiza, Spain."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "e89b06b0-310d-4448-9376-e2ec56e17145",
+      "artist_name": "1200 Techniques",
+      "page_title": "1200 Techniques",
+      "source_url": "https://en.wikipedia.org/wiki/1200_Techniques",
+      "source_text": "1200 Techniques are an Australian hip hop group formed in 1997 in Melbourne, Australia, consisting of DJ Peril (Jason Foretti) as producer, percussionist, DJ; N'fa Forster-Jones as lead vocalist (under the name Nfamas) and Kemstar (DJ Peril's brother, Simon Foretti) as lead guitarist. Whilst primarily being in the genre of hip hop, they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat. They released their debut studio album, Choose One, in March 2002.\nAllMusic's Jody Macgregor wrote, \"Although Australia had an underground hip-hop scene starting in the late '80s, it wasn't until 2001 that it began to be recognized by the mainstream of Australian music. 1200 Techniques were an important part of that moment, with charting singles, appearances on TV shows like John Safran's Music Jamboree, and a sound that contained an eclectic blend of rock, dance, and funk influences to win over those Australians unconvinced their country had a place as a producer of quality hip-hop music.\" The group disbanded in 2005 and reformed in 2014.",
+      "facts": [
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "rock",
+          "evidence_quote": "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "funk",
+          "evidence_quote": "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "soul",
+          "evidence_quote": "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "electro",
+          "evidence_quote": "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "drum and bass",
+          "evidence_quote": "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "electro jazz",
+          "evidence_quote": "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "breakbeat",
+          "evidence_quote": "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat."
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "guitar",
+          "evidence_quote": "Kemstar (DJ Peril's brother, Simon Foretti) as lead guitarist."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "4f9541e2-1a8c-4303-a87a-7dbe0d80a6be",
+      "artist_name": "12012",
+      "page_title": "12012",
+      "source_url": "https://en.wikipedia.org/wiki/12012",
+      "source_text": "12012 (イチニーゼロイチニ, ichi nī zero ichi ni) is a Japanese visual kei rock band. Formed in 2003 in Osaka Prefecture, the group centers its work around the concept of \"madness inside a human\" (人間の内面における狂気 ningen no naimen ni okeru kyōki). 12012 is also the penal code for the possession of a dangerous weapon in California. The group sometimes performs as \"Kyōki Shoji\" (凶器所持), which is a translation of that offense.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "d4e58ad8-500d-433d-b0ff-ee8fd3459ad9",
+      "artist_name": "1208",
+      "page_title": "1208",
+      "source_url": "https://en.wikipedia.org/wiki/1208",
+      "source_text": "Year 1208 (MCCVIII) was a leap year starting on Tuesday of the Julian calendar.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "45d3a684-069c-4f98-8c88-f83e0a50cfff",
+      "artist_name": "13 Cats",
+      "page_title": "Cat",
+      "source_url": "https://en.wikipedia.org/wiki/Cat",
+      "source_text": "The cat (Felis catus), also called domestic cat and house cat, is a small domesticated carnivorous mammal. It is a member of Felidae, the family of mammals in the order Carnivora also colloquially referred to as cats. An obligate carnivore requiring a predominantly meat-based diet, it has retractable claws adapted to killing small prey species such as mice and rats. It has a strong, flexible body, quick reflexes, and sharp teeth, and its night vision and sense of smell are well developed. It is a social species, but a solitary hunter and a crepuscular predator.\nCat communication includes meowing, purring, trilling, hissing, growling, grunting, body language, and scent marking. It can hear sounds too faint or too high in frequency for human ears, such as those made by small mammals. It secretes and perceives pheromones. Cat intelligence is evident in its ability to adapt, learn through observation, and solve problems. The domestic cat is the only domesticated species of the family Felidae. \nAdvances in archaeology and genetics have shown that the domestication of the cat started in the Near East around 7500 BCE. Today, the domestic cat occurs across the globe and is valued by humans for companionship and its ability to kill vermin. It is commonly kept as a pet, working cat, and pedigreed cat shown at cat fancy events. Out of the estimated 600 million domestic cats worldwide, 400 million reside in Asia, including 58 million in China. About 73.8 million cats are estimated to live in the United States, and about 10.9 million cats in the United Kingdom. It also ranges freely as a feral cat, avoiding human contact. Pet abandonment contributes to increasing of the global feral cat population, which has driven the decline of bird, mammal, and reptile species. Population control includes spaying and neutering.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "c7092c54-2774-415b-81dd-792031999fce",
+      "artist_name": "13 Stories",
+      "page_title": "13 Stories",
+      "source_url": "https://en.wikipedia.org/wiki/13_Stories",
+      "source_text": "13 Stories is an Atlanta, Georgia based pop-band. Keyboards and leading vocals are provided by Cheri D, lead guitar is by Cat, bass guitar is by J3, and drums are by Max.  They have released a CD entitled FunkyPopSexyHouseRap with the single Beep! Beep!.  Beep! Beep! was used in 2006 for a series of television commercials for Ford automobiles which featured not only the song, but also the band playing it.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "pop",
+          "evidence_quote": "13 Stories is an Atlanta, Georgia based pop-band."
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "drums",
+          "evidence_quote": "drums are by Max."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "2aa07e57-bd8a-4fa0-ba5a-72e8f7c3e63e",
+      "artist_name": "1349",
+      "page_title": "1349",
+      "source_url": "https://en.wikipedia.org/wiki/1349",
+      "source_text": "Year 1349 (MCCCXLIX) was a common year starting on Thursday of the Julian calendar.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "6ebbcd94-2045-4e89-8688-b9b33fce43e8",
+      "artist_name": "13th Chime",
+      "page_title": "Clock chime",
+      "source_url": "https://en.wikipedia.org/wiki/Clock_chime",
+      "source_text": "A clock chime is a melody or a set of melodies played at intervals upon a set of bells to mark the passage of time. It is also the name of the installed set of bells, when they are not part of a larger bell instrument such as a carillon.\nBells that play clock chimes are commonly placed in bell towers and elaborate floor clocks, but may be found any place where a large clock is installed.\nThe chime is distinct from the striking of the hour on a single bell, although a clock that plays a chime normally plays the associated hour strike as well, while the bell stuck on the hour may or may not have a part in the melodies.\nA variety of chime melodies exist, many associated with a particular location or bell tower that originated or popularized them.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "789b6259-3fbc-4c45-af8e-5b291c51e45f",
+      "artist_name": "15 Minutes Late",
+      "page_title": "15 Minutes",
+      "source_url": "https://en.wikipedia.org/wiki/15_Minutes",
+      "source_text": "15 Minutes is a 2001 satirical buddy cop action thriller film directed and written by John Herzfeld and starring Robert De Niro and Edward Burns. Its story revolves around homicide detective Eddie Fleming (De Niro) and fire marshal Jordan Warsaw (Burns), who join forces to apprehend Emil Slovák and Oleg Razgul (Karel Roden and Oleg Taktarov), a pair of Eastern European murderers videotaping their crimes with hopes of becoming rich and famous. The title is a reference to the Andy Warhol quotation, \"In the future, everyone will be world-famous for 15 minutes.\" 15 Minutes was produced by TriBeCa Productions and New Redemption Pictures and released by New Line Cinema overseas and Kinowelt Filmverleih in Germany on March 9, 2001. The film received negative reviews from critics and grossed $56.4 million against a $42 million budget.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "71b02ffb-afad-4073-b973-6a09b1b90e12",
+      "artist_name": "151",
+      "page_title": "151",
+      "source_url": "https://en.wikipedia.org/wiki/151",
+      "source_text": "151 may refer to:\n\nAD 151, a year\n151 BC, a year\n151 (number), the natural number following 150 and preceding 152\nBacardi 151\nPsalm 151\nZIS-151\n151 Abundantia, a main-belt asteroid\nU.S. Route 151, a road\n151 Regiment RLC",
+      "facts": []
+    },
+    {
+      "artist_mbid": "a7fcbfe0-19dd-41fa-9689-508f4b57768d",
+      "artist_name": "16 Bit Lolitas",
+      "page_title": "Anjunabeats",
+      "source_url": "https://en.wikipedia.org/wiki/Anjunabeats",
+      "source_text": "Anjunabeats (, an-JOO-nə-beets) is a British record label started in 2000 by producers Jonathan \"Jono\" Grant and Paavo Siljamäki of Above & Beyond. Initially, Anjunabeats was only a trance music label, and it started releasing trance-edged house in 2011. The name Anjuna comes from the name of a beach in Goa, India.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "1f8c7e66-d9fa-4124-be2d-5e4251107eb6",
+      "artist_name": "16 Frames",
+      "page_title": "The Frames",
+      "source_url": "https://en.wikipedia.org/wiki/The_Frames",
+      "source_text": "The Frames are an Irish rock band based in Dublin. Founded in 1990 by Glen Hansard, the band has been influential in the Dublin rock music scene. The group has released six studio albums. Until Hansard's death in 2026, the band's line-up included him, fellow original member Colm Mac Con Iomaire, Joe Doyle, and Rob Bochnik.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "9a22fc7b-ad7f-4c70-9e0f-4d40cd7562cd",
+      "artist_name": "16 Horsepower",
+      "page_title": "16 Horsepower",
+      "source_url": "https://en.wikipedia.org/wiki/16_Horsepower",
+      "source_text": "16 Horsepower, often stylized as Sixteen Horsepower, is an American country rock band from Denver, Colorado. The group consists of vocalist and multi-instrumentalist David Eugene Edwards, bassist Pascal Humbert and drummer Jean-Yves Tola.\nThe group pioneered the gothic country genre by mixing country rock with traditional bluegrass, gospel and Appalachian instrumentation. Their music often invoked religious imagery dealing with conflict, redemption, punishment, and guilt through Edwards's lyrics.\nFor the bulk of its career, the band consisted of Edwards, Tola and Humbert, the latter two formerly of the French band Passion Fodder. After releasing four studio albums and touring extensively, the group broke up in 2005, citing \"mostly political and spiritual\" differences. The members continued in the groups Wovenhand and Lilium before reforming in 2025.",
+      "facts": [
+        {
+          "relation": "associated_genre",
+          "target_name": "country rock",
+          "evidence_quote": "is an American country rock band from Denver, Colorado."
+        },
+        {
+          "relation": "influenced_by_genre",
+          "target_name": "gothic country",
+          "evidence_quote": "The group pioneered the gothic country genre by mixing country rock with traditional bluegrass, gospel and Appalachian instrumentation."
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "bass",
+          "evidence_quote": "bassist Pascal Humbert"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "drums",
+          "evidence_quote": "drummer Jean-Yves Tola."
+        }
+      ]
+    },
+    {
+      "artist_mbid": "76b80114-3d45-422a-8b2a-e58622442f87",
+      "artist_name": "16 Volt",
+      "page_title": "16volt",
+      "source_url": "https://en.wikipedia.org/wiki/16volt",
+      "source_text": "16volt is an American industrial rock band formed by Eric Powell, with other performers added for live shows. The current lineup consists of Powell on vocals, John \"Servo\" DeSalvo on drums, \"Mindcage\" Rick Furr on guitars, and Jim Semonik on keyboards.",
+      "facts": [
+        {
+          "relation": "plays_instrument",
+          "target_name": "keyboards",
+          "evidence_quote": "Jim Semonik on keyboards"
+        }
+      ]
+    },
+    {
+      "artist_mbid": "836d8ab6-8f06-4d92-ba15-93c62770765b",
+      "artist_name": "16Volt",
+      "page_title": "16volt",
+      "source_url": "https://en.wikipedia.org/wiki/16volt",
+      "source_text": "16volt is an American industrial rock band formed by Eric Powell, with other performers added for live shows. The current lineup consists of Powell on vocals, John \"Servo\" DeSalvo on drums, \"Mindcage\" Rick Furr on guitars, and Jim Semonik on keyboards.",
+      "facts": [
+        {
+          "relation": "plays_instrument",
+          "target_name": "drums",
+          "evidence_quote": "John \"Servo\" DeSalvo on drums"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "guitars",
+          "evidence_quote": "\"Mindcage\" Rick Furr on guitars"
+        },
+        {
+          "relation": "plays_instrument",
+          "target_name": "keyboards",
+          "evidence_quote": "Jim Semonik on keyboards"
+        }
+      ]
+    },
+    {
+      "artist_mbid": "8315641a-6dca-40fd-a893-d247e4db84c3",
+      "artist_name": "17 Hippies",
+      "page_title": "17 Hippies",
+      "source_url": "https://en.wikipedia.org/wiki/17_Hippies",
+      "source_text": "17 Hippies is a band from Berlin, Germany, playing largely on acoustic instruments, a radically democratic collective of professionals and amateurs. Their music is a confection of various folk influences. They are most popular in their native Germany and France.",
+      "facts": []
+    },
+    {
+      "artist_mbid": "a8ff9466-806a-45f2-bfb1-ede1f6776100",
+      "artist_name": "18th Dye",
+      "page_title": "18th Dye",
+      "source_url": "https://en.wikipedia.org/wiki/18th_Dye",
+      "source_text": "18th Dye was a Berlin-based German/Danish noise rock band formed in 1992 by Sebastian Büttrich (vocals, guitar), Heike Rädeker (vocals, bass) and Piet Breinholm-Bendtsen (drums). They broke up in 1999 after two albums and an EP, but reformed in 2005. A third album, Amorine Queen, was released in 2008 but they split up again in 2009.",
+      "facts": []
+    }
+  ]
+}

@@ -289,3 +289,59 @@ rbo:sungInCountry a owl:ObjectProperty ;
     rdfs:range res:Country .
 
 rbo:sungInCountry owl:propertyChainAxiom (rbo:sungBy rbo:origin ) .
+
+
+# -----------------------------------
+# Bonus: enriquecimiento desde textos
+# -----------------------------------
+
+# Nuevas clases
+res:Genre a rdfs:Class ;
+    rdfs:label "género musical"@es .
+
+res:Instrument a rdfs:Class ;
+    rdfs:label "instrumento musical"@es .
+
+res:TextSource a rdfs:Class ;
+    rdfs:label "fuente textual"@es .
+
+res:ExtractedFact a rdfs:Class ;
+    rdfs:label "hecho extraído"@es .
+
+# Relaciones con géneros
+rbo:associatedWithGenre a rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range res:Genre .
+
+rbo:influencedByGenre a rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range res:Genre .
+
+# Relaciones con instrumentos y personas
+rbo:playsInstrument a rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range res:Instrument .
+
+rbo:influencedByArtist a rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range res:Person .
+
+rbo:collaboratedWith a rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range res:Person .
+
+rbo:producedBy a rdf:Property ;
+    rdfs:domain res:Artist ;
+    rdfs:range res:Person .
+
+# Procedencia y evidencia
+rbo:extractedFrom a rdf:Property ;
+    rdfs:range res:TextSource .
+
+rbo:sourceUrl a rdf:Property ;
+    rdfs:domain res:TextSource ;
+    rdfs:range xsd:anyURI .
+
+rbo:evidenceQuote a rdf:Property ;
+    rdfs:domain res:ExtractedFact ;
+    rdfs:range xsd:string .

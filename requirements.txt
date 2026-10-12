@@ -2,3 +2,4 @@ pandas
 requests
 rdflib
 requests
+openai

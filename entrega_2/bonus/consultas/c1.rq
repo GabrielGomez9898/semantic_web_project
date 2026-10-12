@@ -1,0 +1,10 @@
+
+PREFIX res: <http://uniandes.edu.co/wsproject2026/vocab/lit#>
+PREFIX rbo: <http://uniandes.edu.co/wsproject2026/vocab/ontology#>
+
+SELECT (COUNT(DISTINCT ?fact) AS ?totalHechos)
+WHERE {
+    ?fact a res:ExtractedFact ;
+          rbo:evidenceQuote ?evidence ;
+          rbo:extractedFrom ?source .
+}
