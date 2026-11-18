@@ -15,7 +15,9 @@ entrega_3/
 │   ├── instances.ttl       # Instancias (100k canciones, 27k artistas, países, tags, similitudes)
 │   └── enrichment.ttl      # Bonus Etapa 2: géneros/instrumentos/personas extraídos de textos
 ├── notebooks/
-│   └── 01_carga_grafo_neo4j.ipynb   # Carga + verificación (ejecutar de arriba a abajo)
+│   ├── 01_carga_grafo_neo4j.ipynb                  # Punto 1: carga + verificación
+│   ├── 02_integracion_resenas_critiquebrainz.ipynb # Punto 2: preferencias de usuarios + corpus RAG
+│   └── 03_recomendacion_algoritmos_grafos.ipynb    # Punto 3: Louvain + Personalized PageRank
 ├── scripts/
 │   └── consultas_verificacion.cypher # Las consultas de verificación para Neo4j Browser / Aura
 └── .env.example            # Plantilla de credenciales
@@ -113,3 +115,60 @@ Recuperación global (`recuperar`) o restringida a canciones candidatas (`recupe
 Prueba de auto-recuperación (150 reseñas, en AuraDB): Recall@1 = 0,88, Recall@5 = 0,91, MRR = 0,90.
 
 Totales del grafo tras el punto 2: ~137 mil nodos y ~148 mil relaciones (dentro de AuraDB Free).
+
+---
+
+## Punto 3. Generación de candidatos con algoritmos de grafos
+
+Notebook: `notebooks/03_recomendacion_algoritmos_grafos.ipynb`. Requiere los puntos 1 y 2 cargados en Neo4j.
+
+AuraDB Free no incluye Graph Data Science. Por eso se sigue el mecanismo del taller: el grafo se **proyecta desde Neo4j
+con Cypher**, los algoritmos se ejecutan con **NetworkX** y los resultados se **escriben de vuelta en Neo4j**.
+
+### Proyección
+
+Es un grafo no dirigido y ponderado de 130.031 nodos y 136.721 aristas:
+
+| Arista | Peso |
+|---|---|
+| canción–artista, canción–tag, canción–álbum–artista, usuario–entidad reseñada (punto 2), artista–entidades del bonus | 1 |
+| canción–canción (`SIMILAR_TO`) | 10 × score |
+| artista–país | 0,2 |
+
+El análisis de componentes conexas (WCC) muestra que sin el país solo el 27 % de las canciones está en el núcleo
+conectado. Por eso el país entra con peso bajo, como respaldo.
+
+### Algoritmos
+
+| Algoritmo | Parte del grafo | Información que produce | Contribución a los candidatos |
+|---|---|---|---|
+| **Louvain** | Co-grafo de artistas: similitud entre canciones, tags compartidos, críticos en común, bonus | 133 comunidades («escenas»), modularidad 0,81. Se guardan en `Artist.community` | Escena de la preferencia. Modo «misma escena» (Louvain selecciona, PPR ordena). Anotación y explicación de cada candidato |
+| **Personalized PageRank** | Grafo heterogéneo completo y ponderado | Cercanía de cada nodo a las semillas | Ranking de canciones, artistas y álbumes, con el camino más fuerte como explicación |
+
+La función `recomendar(canciones, artistas, tags, usuario, texto, modo)` acepta cualquier tipo de preferencia. El texto
+libre se resuelve con el índice vectorial del punto 2. La lista final aplica diversidad: máximo 2 canciones por artista
+y sin duplicados del MSD.
+
+### Evaluación (ocultamiento de relaciones)
+
+Canción → canciones similares ocultas (200 semillas, 770 relaciones ocultas):
+
+| Método | recall@10 | recall@50 |
+|---|---|---|
+| Popularidad | 0,001 | 0,003 |
+| Mismo artista | 0,010 | 0,018 |
+| Solo Louvain (misma comunidad) | 0,029 | 0,099 |
+| PPR | 0,032 | 0,168 |
+| Louvain → PPR (modo escena) | 0,034 | 0,156 |
+| **PPR, máx. 2 por artista (por defecto)** | **0,039** | **0,213** |
+
+Otros resultados:
+- **Usuario → próxima reseña:** hit@50 de 0,036 con PPR frente a 0,014 con popularidad.
+- **Ampliar las semillas con la escena de Louvain:** no mejoró, ni con canciones ni con tags, así que quedó como opción
+  desactivada.
+
+### Resultados en Neo4j
+
+- `Artist.community`: 4.747 artistas.
+- `(:User)-[:RECOMMENDED {rank, score, community, method}]->(:Track)`: 3.870 relaciones, 10 por usuario.
+- Totales del grafo: 137.446 nodos y 151.553 relaciones.

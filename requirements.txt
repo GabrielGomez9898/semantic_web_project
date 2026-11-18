@@ -1,7 +1,7 @@
 pandas
 requests
 rdflib
-requests
 openai
 neo4j>=5.26,<7
 sentence-transformers>=3,<6
+networkx>=3.2
