@@ -18,9 +18,15 @@ entrega_3/
 │   ├── 01_carga_grafo_neo4j.ipynb                  # Punto 1: carga + verificación
 │   ├── 02_integracion_resenas_critiquebrainz.ipynb # Punto 2: preferencias de usuarios + corpus RAG
 │   ├── 03_recomendacion_algoritmos_grafos.ipynb    # Punto 3: Louvain + Personalized PageRank
-│   └── 04_ranking_recomendaciones.ipynb            # Punto 4: ranking final (grafo + preferencias)
+│   ├── 04_ranking_recomendaciones.ipynb            # Punto 4: ranking final (grafo + preferencias)
+│   └── 05_sistema_recomendacion.ipynb              # Punto 5: sistema + interfaz (ejemplos y lanzamiento)
+├── app/
+│   └── app.py                       # Interfaz web (Gradio): python entrega_3/app/app.py
 ├── src/
-│   └── recomendador_grafo.py        # Generador de candidatos del punto 3, reutilizable
+│   ├── conexion.py                  # Conexión a Neo4j con reintentos (.env)
+│   ├── recomendador_grafo.py        # Punto 3: candidatos (Louvain + PPR)
+│   ├── ranking.py                   # Punto 4: puntaje final
+│   └── sistema_recomendacion.py     # Punto 5: preferencia → Top-K explicado
 ├── scripts/
 │   └── consultas_verificacion.cypher # Las consultas de verificación para Neo4j Browser / Aura
 └── .env.example            # Plantilla de credenciales
@@ -204,17 +210,17 @@ de `src/recomendador_grafo.py`, que empaqueta el código del notebook 03.
   el grafo.
   - `Q` es la fracción del Top-10 formada por canciones con reseñas de valoración ≥ μ.
   - `R` es el recall@10/@50 relativo.
-- **Pesos elegidos:** `G = 0,2`, `V = 0,1`, `A = 0,7`, `E = 0`.
+- **Pesos elegidos:** `G = 0,2`, `V = 0,1`, `A = 0,7`, `E = 0`. Se guardan en `data/ranking_config.json`, que usa el sistema del punto 5.
 
 Resultados en **prueba**:
 
 | Variante | Pesos (G, V, A, E) | recall@10 | recall@50 | Q (respaldo) | Top-10 con reseñas |
 |---|---|---|---|---|---|
-| Solo grafo (punto 3) | (1, 0, 0, 0) | 0,046 | 0,238 | 0,091 | 0,170 |
-| Pesos iguales | (0,25, 0,25, 0,25, 0,25) | 0,058 | 0,234 | 0,160 | 0,217 |
-| **Seleccionado** | **(0,2, 0,1, 0,7, 0)** | **0,049** | **0,234** | **0,209** | **0,352** |
-| Sin V | (0,3, 0, 0,7, 0) | 0,045 | 0,236 | 0,140 | 0,286 |
-| Sin A | (0,9, 0,1, 0, 0) | 0,046 | 0,238 | 0,114 | 0,174 |
+| Solo grafo (punto 3) | (1, 0, 0, 0) | 0,043 | 0,215 | 0,091 | 0,171 |
+| Pesos iguales | (0,25, 0,25, 0,25, 0,25) | 0,055 | 0,218 | 0,158 | 0,215 |
+| **Seleccionado** | **(0,2, 0,1, 0,7, 0)** | **0,045** | **0,213** | **0,210** | **0,353** |
+| Sin V | (0,3, 0, 0,7, 0) | 0,041 | 0,213 | 0,141 | 0,285 |
+| Sin A | (0,9, 0,1, 0, 0) | 0,043 | 0,215 | 0,114 | 0,175 |
 
 El ranking final mantiene la relevancia del grafo y **duplica** la fracción del Top-10 respaldada por opiniones de
 usuarios. El peso bajo de `G` no le resta importancia:
@@ -230,3 +236,45 @@ usuarios. El peso bajo de `G` no le resta importancia:
 - **En Neo4j:** `(:User)-[:RECOMMENDED {method: 'ranking_final', rank, score, graph_score, rating, text_affinity,
   n_reviews}]->(:Track)`, 3.870 relaciones (Top-10 por usuario). Conviven con las del punto 3
   (`method: 'ppr+louvain'`).
+
+---
+
+## Punto 5. Sistema de recomendación
+
+Interfaz web hecha con **Gradio**. Se abre así, desde la raíz del repo:
+
+```bash
+pip install -r requirements.txt
+python entrega_3/app/app.py          # abre http://127.0.0.1:7860   (--share genera un enlace público temporal)
+```
+
+El notebook `notebooks/05_sistema_recomendacion.ipynb` documenta el sistema, muestra ejemplos con las mismas tarjetas de
+la interfaz y la lanza; sirve también para Colab. La primera carga tarda unos 1–2 minutos. Después, cada recomendación
+tarda menos de un segundo.
+
+**Entrada.** La persona puede indicar, solas o combinadas:
+- canciones;
+- artistas;
+- géneros o etiquetas;
+- su usuario de CritiqueBrainz;
+- una descripción libre, en español o inglés.
+
+La interfaz confirma qué entendió y avisa lo que no encontró.
+
+**Salida.** Un Top-K ordenado (K entre 3 y 20). Cada recomendación se muestra en una tarjeta con:
+- **¿Por qué?:** el motivo en lenguaje natural, sacado del camino más fuerte en el grafo. Por ejemplo «Suena parecido a
+  «Crazy Train» (Ozzy Osbourne)» o «Reseñaste el álbum «Heligoland» y esta canción es del mismo artista»;
+- la **escena musical** (comunidad Louvain) y si coincide con la de la preferencia;
+- la **valoración de usuarios** de CritiqueBrainz y si subió de puesto gracias a ella;
+- un **fragmento de una reseña real**, el más afín a la preferencia según el índice vectorial, con enlace;
+- el **camino completo** en el grafo (desplegable) y el detalle del puntaje (G, V, A, E).
+
+Hay una opción para pedir solo canciones de la misma escena: Louvain selecciona y el ranking ordena.
+
+**Nada está precalculado.** `src/sistema_recomendacion.py` ejecuta en cada solicitud:
+- la generación de candidatos (`src/recomendador_grafo.py`, punto 3);
+- el ranking (`src/ranking.py`, punto 4), con los pesos de `data/ranking_config.json` que elige el notebook 04;
+- la búsqueda en el índice vectorial (punto 2).
+
+El notebook 05 comprueba que el Top-10 calculado en vivo para una muestra de usuarios coincide con el que el punto 4
+guardó en Neo4j.

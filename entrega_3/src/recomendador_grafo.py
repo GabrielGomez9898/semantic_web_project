@@ -177,7 +177,8 @@ class GrafoRecomendador:
         conocidas = self.canciones_conocidas(semillas, ctx) if conocidas is None else conocidas
         orden = sorted(((t, s) for t, s in scores.items()
                         if s > 0 and self.tipo.get(t) == 'Track' and t not in conocidas), key=lambda x: -x[1])
-        vistas, salida = set(), []
+        # además de las conocidas, se excluyen sus duplicados en el MSD (misma canción y artista, otro ID)
+        vistas, salida = {(self.artista_de[t], titulo_base(self.nombre[t])) for t in conocidas if t in self.artista_de}, []
         for t, s in orden:
             clave = (self.artista_de[t], titulo_base(self.nombre[t]))
             if clave not in vistas:
@@ -187,17 +188,41 @@ class GrafoRecomendador:
                     break
         return salida
 
-    def explicar(self, semillas, destino, ctx=None):
+    def camino(self, semillas, destino, ctx=None):
+        """Camino más fuerte (Dijkstra con costo 1/peso) desde alguna semilla: [(nodo, relación_de_llegada), ...]."""
         ctx = ctx or self.ctx
         try:
-            _, camino = nx.multi_source_dijkstra(ctx['G'], set(semillas), target=destino,
-                                                 weight=lambda u, v, d: 1.0 / d['weight'])
+            _, nodos = nx.multi_source_dijkstra(ctx['G'], set(semillas), target=destino,
+                                                weight=lambda u, v, d: 1.0 / d['weight'])
         except nx.NetworkXNoPath:
+            return []
+        return [(nodos[0], None)] + [(v, ctx['G'][u][v]['rel']) for u, v in zip(nodos, nodos[1:])]
+
+    def explicar(self, semillas, destino, ctx=None):
+        pasos = self.camino(semillas, destino, ctx)
+        if not pasos:
             return '(sin camino)'
-        partes = [self.etiqueta(camino[0])]
-        for u, v in zip(camino, camino[1:]):
-            partes.append(f'─{ctx["G"][u][v]["rel"]}─ {self.etiqueta(v)}')
-        return ' '.join(partes)
+        return ' '.join([self.etiqueta(pasos[0][0])] + [f'─{rel}─ {self.etiqueta(n)}' for n, rel in pasos[1:]])
+
+    def etiquetas_comunidades(self, ctx=None, max_tags=3):
+        """Nombre legible de cada comunidad Louvain: tags más compartidos entre sus artistas."""
+        ctx = ctx or self.ctx
+        tags_artista = defaultdict(set)
+        for f in self.datos['HAS_TAG']:
+            tags_artista[self.artista_de[f['s']]].add(self.nombre[f['o']].lower())
+        for f in self.datos['BONUS']:
+            if self.tipo.get(f['o']) == 'Genre':
+                tags_artista[f['s']].add(self.nombre[f['o']].lower())
+        etiquetas = {}
+        for c, miembros in enumerate(ctx['comms']):
+            cuenta = Counter(t for a in miembros for t in tags_artista[a] if len(t) <= 20)
+            comunes = [t for t, n in cuenta.most_common() if n >= 2][:max_tags]
+            if comunes:
+                etiquetas[c] = ' · '.join(comunes)
+            else:
+                centrales = sorted(miembros, key=lambda a: -ctx['fuerza'].get(a, 0))[:2]
+                etiquetas[c] = 'escena de ' + ' / '.join(self.nombre[a] for a in centrales)
+        return etiquetas
 
     # ------------------------------------------------------------------ preferencias
     def etiqueta(self, n):

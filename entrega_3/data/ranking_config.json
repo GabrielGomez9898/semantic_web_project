@@ -1,0 +1,17 @@
+{
+  "pesos": {
+    "G": 0.2,
+    "V": 0.1,
+    "A": 0.7,
+    "E": 0.0
+  },
+  "n_candidatos": 200,
+  "k_prior": 2.0,
+  "conf_estimada": 0.5,
+  "seleccion": {
+    "regla": "máximo Q (respaldo) con R >= 1 en validación",
+    "paso_rejilla": 0.1,
+    "R_validacion": 1.0426,
+    "Q_validacion": 0.232
+  }
+}
