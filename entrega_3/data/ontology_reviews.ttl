@@ -1,0 +1,144 @@
+@prefix res:  <http://uniandes.edu.co/wsproject2026/vocab/lit#> .
+@prefix rbo:  <http://uniandes.edu.co/wsproject2026/vocab/ontology#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+
+# =====================================================================
+# Etapa 3 · Punto 2 — Extensión de la ontología: preferencias de usuarios
+# Fuente: CritiqueBrainz (reseñas y calificaciones sobre entidades MusicBrainz)
+# Extiende ontology.ttl (Etapa 2); reutiliza res:Track, res:Artist, rbo:sing.
+# =====================================================================
+
+<http://example.org/uni/reviews> a owl:Ontology ;
+    owl:imports <http://example.org/uni> ;
+    rdfs:comment "Extensión con usuarios, reseñas y álbumes de CritiqueBrainz."@es .
+
+# ----------------------------------- Clases ----------------------------------- #
+
+res:User a rdfs:Class ;
+    rdfs:label "usuario"@es ;
+    rdfs:label "user"@en ;
+    rdfs:comment "Usuario de CritiqueBrainz que publica reseñas o calificaciones sobre entidades musicales."@es .
+
+res:Review a rdfs:Class ;
+    rdfs:label "reseña"@es ;
+    rdfs:label "review"@en ;
+    rdfs:comment "Reseña o crítica (texto y/o calificación 1-5) publicada en CritiqueBrainz sobre una canción, un álbum o un artista."@es .
+
+res:Album a rdfs:Class ;
+    rdfs:label "álbum"@es ;
+    rdfs:label "album"@en ;
+    rdfs:comment "Grupo de lanzamiento (release group) de MusicBrainz que contiene canciones del grafo."@es .
+
+res:User owl:disjointWith res:Review, res:Album, res:Track, res:Artist .
+res:Review owl:disjointWith res:Album, res:Track, res:Artist .
+res:Album owl:disjointWith res:Track, res:Artist .
+
+# ----------------------------------- Propiedades de objeto ----------------------------------- #
+
+rbo:writtenBy a owl:ObjectProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range res:User ;
+    rdfs:comment "Autor (usuario) de la reseña."@es .
+
+rbo:wrote a owl:ObjectProperty ;
+    owl:inverseOf rbo:writtenBy .
+
+rbo:reviews a owl:ObjectProperty ;
+    rdfs:domain res:Review ;
+    rdfs:comment "Entidad musical reseñada."@es .
+
+rbo:reviewsRecording a owl:ObjectProperty ;
+    rdfs:subPropertyOf rbo:reviews ;
+    rdfs:domain res:Review ;
+    rdfs:range res:Track ;
+    rdfs:comment "La reseña trata sobre una canción (recording de MusicBrainz)."@es .
+
+rbo:reviewsAlbum a owl:ObjectProperty ;
+    rdfs:subPropertyOf rbo:reviews ;
+    rdfs:domain res:Review ;
+    rdfs:range res:Album ;
+    rdfs:comment "La reseña trata sobre un álbum (release group de MusicBrainz)."@es .
+
+rbo:reviewsArtist a owl:ObjectProperty ;
+    rdfs:subPropertyOf rbo:reviews ;
+    rdfs:domain res:Review ;
+    rdfs:range res:Artist ;
+    rdfs:comment "La reseña trata sobre un artista."@es .
+
+rbo:appearsOn a owl:ObjectProperty ;
+    rdfs:domain res:Track ;
+    rdfs:range res:Album ;
+    rdfs:comment "La canción forma parte del álbum."@es .
+
+rbo:hasTrack a owl:ObjectProperty ;
+    owl:inverseOf rbo:appearsOn .
+
+rbo:releasedBy a owl:ObjectProperty ;
+    rdfs:domain res:Album ;
+    rdfs:range res:Artist ;
+    rdfs:comment "Artista acreditado del álbum."@es .
+
+# Preferencia / interacción usuario -> canción, derivada mediante cadenas de propiedades:
+#   usuario escribió una reseña de la canción                         (wrote ∘ reviewsRecording)
+#   usuario escribió una reseña de un álbum que contiene la canción   (wrote ∘ reviewsAlbum ∘ hasTrack)
+#   usuario escribió una reseña del artista que canta la canción      (wrote ∘ reviewsArtist ∘ sing)
+rbo:interactedWith a owl:ObjectProperty ;
+    rdfs:domain res:User ;
+    rdfs:range res:Track ;
+    rdfs:comment "El usuario expresó una opinión (reseña/calificación) que alcanza a la canción."@es ;
+    owl:propertyChainAxiom ( rbo:wrote rbo:reviewsRecording ) ,
+                           ( rbo:wrote rbo:reviewsAlbum rbo:hasTrack ) ,
+                           ( rbo:wrote rbo:reviewsArtist rbo:sing ) .
+
+# ----------------------------------- Propiedades de datos ----------------------------------- #
+
+rbo:reviewText a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:string .
+
+rbo:rating a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Calificación de 1 a 5 (opcional)."@es .
+
+rbo:language a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:string .
+
+rbo:license a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:string .
+
+rbo:publishedOn a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:dateTime .
+
+rbo:reviewUrl a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:anyURI .
+
+rbo:reviewSource a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Fuente original de la reseña importada en CritiqueBrainz (p. ej. BBC)."@es .
+
+rbo:matchMethod a owl:DatatypeProperty ;
+    rdfs:domain res:Review ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Estrategia con la que se reconcilió la entidad reseñada con el grafo."@es .
+
+rbo:mbid a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identificador MusicBrainz / CritiqueBrainz."@es .
+
+rbo:recordingMbid a owl:DatatypeProperty ;
+    rdfs:domain res:Track ;
+    rdfs:range xsd:string ;
+    rdfs:comment "MBID de recording de MusicBrainz asociado a la canción del Million Song Dataset."@es .
+
+rbo:displayName a owl:DatatypeProperty ;
+    rdfs:domain res:User ;
+    rdfs:range xsd:string .

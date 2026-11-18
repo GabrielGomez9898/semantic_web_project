@@ -61,3 +61,55 @@ Decisiones principales:
 - `owl:disjointWith` referencia `res:Persona`, que no existe (la clase es `res:Person`).
 - `res:Similarity`, `rbo:hasSimilarity`, `rbo:similarTrack` y `rbo:similarityScore` se usan en las instancias pero no están declarados.
 - 3 canciones no tienen título (incumplen `owl:cardinality 1` sobre `rbo:title`).
+
+---
+
+## Punto 2. Integración de preferencias de usuarios (CritiqueBrainz)
+
+Notebook: `notebooks/02_integracion_resenas_critiquebrainz.ipynb` (requiere el grafo del punto 1 cargado en Neo4j).
+
+### Fuente y archivos
+
+| Archivo | Contenido |
+|---|---|
+| `data/critiquebrainz/reviews_{recording,release_group,artist}.jsonl.gz` | Caché de reseñas de CritiqueBrainz (API `/ws/1/review/`), campos relevantes. |
+| `data/critiquebrainz/musicbrainz_{recording,release_group}.json` | Caché de la resolución en MusicBrainz (título + MBIDs de artistas acreditados). |
+| `data/msd_recording_mbid.csv` | Mapeo MSD `track_id` → MusicBrainz `recording_mbid` (filtrado del archivo `msd-mbid-2016-01` usado en la Etapa 1). |
+| `data/ontology_reviews.ttl` | Extensión de la ontología: `User`, `Review`, `Album`, `interactedWith` (cadenas OWL), etc. |
+| `data/reviews.ttl` | Instancias RDF generadas (reseñas, usuarios, álbumes, `recordingMbid`). |
+| `data/corpus_rag.jsonl.gz` | Corpus RAG: chunks con contexto (sin embeddings). |
+
+Si se borran los cachés, el notebook vuelve a descargar todo (~15 min por los límites de las APIs).
+
+### Reconciliación y cobertura
+
+Las canciones del grafo usan IDs del Million Song Dataset, sin MBID de recording. Estrategias (de más a menos específica):
+
+| Estrategia | Clave | Reseñas | Con texto | Canciones cubiertas |
+|---|---|---|---|---|
+| `recording_mbid` | MBID exacto vía mapeo MSD → MusicBrainz | 7 | 0 | 7 |
+| `recording_artista_titulo` | MBID de artista + título normalizado | 7 | 4 | 7 |
+| `album_artista_titulo` | MBID de artista + título normalizado del álbum (`rbo:released`) | 1.942 | 1.845 | 2.966 |
+| `artista_mbid` | MBID de artista exacto | 50 | 18 | 313 |
+| **Total** | | **2.006** de 14.600 | **1.867** | **3.206 (3,2 %)** — 2.999 con texto |
+
+- CritiqueBrainz solo tiene 916 reseñas de *recordings* (361 con texto); las que coinciden con el grafo no tienen texto.
+  Por eso la cobertura útil proviene de las reseñas de **álbumes** (13.079, en su mayoría críticas de la BBC con licencia CC).
+- Siempre se exige el MBID del artista, lo que evita falsos positivos con títulos genéricos.
+- Causas de no emparejamiento (reportadas en el notebook): artista ausente del grafo, título distinto, entidad fusionada/eliminada en MusicBrainz.
+
+### Modelo en Neo4j
+
+`(:User)<-[:WRITTEN_BY]-(:Review)-[:REVIEWS_ALBUM|REVIEWS_RECORDING|REVIEWS_ARTIST]->(:Album|:Track|:Artist)`,
+`(:Track)-[:APPEARS_ON]->(:Album)-[:RELEASED_BY]->(:Artist)` y la preferencia materializada
+`(:User)-[:INTERACTED_WITH {via, rating, review}]->(:Track)` (3.470 relaciones), derivada de las cadenas de propiedades de `rbo:interactedWith`.
+
+### Corpus RAG
+
+1.855 reseñas (≥ 10 palabras) → **5.335 chunks** (~130 palabras, por oraciones, solapamiento de una oración, encabezado de
+contexto con la entidad reseñada) → embeddings `intfloat/multilingual-e5-small` (384 d, multilingüe) →
+`(:Chunk)-[:PART_OF]->(:Review)` con índice vectorial `chunk_embedding`.
+Recuperación global (`recuperar`) o restringida a canciones candidatas (`recuperar_para_canciones`).
+Prueba de auto-recuperación (150 reseñas, en AuraDB): Recall@1 = 0,88, Recall@5 = 0,91, MRR = 0,90.
+
+Totales del grafo tras el punto 2: ~137 mil nodos y ~148 mil relaciones (dentro de AuraDB Free).
