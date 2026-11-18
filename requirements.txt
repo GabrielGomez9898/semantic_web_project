@@ -3,3 +3,4 @@ requests
 rdflib
 requests
 openai
+neo4j>=5.26,<7

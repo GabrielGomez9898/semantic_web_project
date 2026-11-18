@@ -1,0 +1,640 @@
+@prefix rbo: <http://uniandes.edu.co/wsproject2026/vocab/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix res: <http://uniandes.edu.co/wsproject2026/vocab/lit#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+res:ExtractedFact_020c8907610eac9a4cb187b68482e58de3f33a00 a res:ExtractedFact ;
+    rbo:evidenceQuote "Chris Egan (drums)" ;
+    rbo:extractedFrom res:TextSource_0be945816d796282799f848341ad620a4e99a4c6 ;
+    rdf:object res:Instrument_drums_8aaee0548e ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_f26c72d3-e52c-467b-b651-679c73d8e1a7 .
+
+res:ExtractedFact_097c9531915e772952b3df5886d1fa0abde04398 a res:ExtractedFact ;
+    rbo:evidenceQuote "bassist Pascal Humbert" ;
+    rbo:extractedFrom res:TextSource_eef179c03b824ebf4ba467dcf1998b6e5c6c1e4e ;
+    rdf:object res:Instrument_bass_62abc4b478 ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_9a22fc7b-ad7f-4c70-9e0f-4d40cd7562cd .
+
+res:ExtractedFact_0ce77eaf393bb77fefad6016b3776438b425caf3 a res:ExtractedFact ;
+    rbo:evidenceQuote "...And Oceans, previously Havoc Unit and Festerday, is a Finnish metal band." ;
+    rbo:extractedFrom res:TextSource_072e7167bcbbec18d155425ace15e9119776a7a8 ;
+    rdf:object res:Genre_metal_4963bb0591 ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_284460fc-c58a-4214-b81c-299a66bbd786 .
+
+res:ExtractedFact_10c932795677db50f2f2bd8a5bed58f7d50f9290 a res:ExtractedFact ;
+    rbo:evidenceQuote "had created in 2009 a new label to release all of their music from their own various bands called Starbox Music." ;
+    rbo:extractedFrom res:TextSource_f9f7ddbce63e79dc1ed277726bc65c87cd670ac3 ;
+    rdf:object res:ExternalPerson_starbox_music_e9c69214a0 ;
+    rdf:predicate rbo:producedBy ;
+    rdf:subject res:Artist_bf346e67-b4b1-41c0-bcc7-a8f4df4fbbbb .
+
+res:ExtractedFact_137c2cce721be0b14e7148e5cfe3b6f3a531af44 a res:ExtractedFact ;
+    rbo:evidenceQuote "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Genre_electro_jazz_26cfbf0c56 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_1623ca128e86337c0cbe2f755633025a7bc49645 a res:ExtractedFact ;
+    rbo:evidenceQuote "In the following years, it pursued a less traditional, more industrial-oriented direction." ;
+    rbo:extractedFrom res:TextSource_072e7167bcbbec18d155425ace15e9119776a7a8 ;
+    rdf:object res:Genre_industrial_d09675fce8 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_284460fc-c58a-4214-b81c-299a66bbd786 .
+
+res:ExtractedFact_1d695a59aced8fb735636d7de0574672fd03492d a res:ExtractedFact ;
+    rbo:evidenceQuote "John \"Servo\" DeSalvo on drums" ;
+    rbo:extractedFrom res:TextSource_b27056260be7a103909c41ca66f12f1442eb1961 ;
+    rdf:object res:Instrument_drums_8aaee0548e ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_836d8ab6-8f06-4d92-ba15-93c62770765b .
+
+res:ExtractedFact_1fa68e709bf76e709c3dd5031be75ba36eec1036 a res:ExtractedFact ;
+    rbo:evidenceQuote "11/5 was an American hip hop group" ;
+    rbo:extractedFrom res:TextSource_cdb3896a38e856d54c602c6333994db53612f913 ;
+    rdf:object res:Genre_hip_hop_1ab40b9589 ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_d998c613-a715-48b9-87a3-df7598056f8c .
+
+res:ExtractedFact_21b3a90a4f56f643b309eb0a061fa17b7116d097 a res:ExtractedFact ;
+    rbo:evidenceQuote "Lars Taylor, is a Swiss fusion guitarist, composer, and producer." ;
+    rbo:extractedFrom res:TextSource_d21eca1142c27987f2dcbdfdc95d5bbdcb544abf ;
+    rdf:object res:Genre_fusion_f7e6fdf149 ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_2fc659fa-293f-4288-bff5-29447f31f628 .
+
+res:ExtractedFact_24480a9ff7e6c92c891690c70a14e719383e0323 a res:ExtractedFact ;
+    rbo:evidenceQuote "the majority of those engineered by Stewart." ;
+    rbo:extractedFrom res:TextSource_94e68ae0c975210ca568d45b97a1b627db492622 ;
+    rdf:object res:ExternalPerson_eric_stewart_56679c1ab0 ;
+    rdf:predicate rbo:producedBy ;
+    rdf:subject res:Artist_f37c537b-3557-4031-bfd6-ab63ced32854 .
+
+res:ExtractedFact_24ddf4602c37d196bdfcc8e5bdd00bb9faf18ff6 a res:ExtractedFact ;
+    rbo:evidenceQuote "\"Mindcage\" Rick Furr on guitars" ;
+    rbo:extractedFrom res:TextSource_b27056260be7a103909c41ca66f12f1442eb1961 ;
+    rdf:object res:Instrument_guitars_0c347a5017 ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_836d8ab6-8f06-4d92-ba15-93c62770765b .
+
+res:ExtractedFact_3028139cec966dea20a5903ec34e143523306235 a res:ExtractedFact ;
+    rbo:evidenceQuote "Mario Andreoni (guitar)" ;
+    rbo:extractedFrom res:TextSource_0be945816d796282799f848341ad620a4e99a4c6 ;
+    rdf:object res:Instrument_guitar_22942b7c5c ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_f26c72d3-e52c-467b-b651-679c73d8e1a7 .
+
+res:ExtractedFact_36bb7092a927ce05740c2d5dadc0c4d259d0863f a res:ExtractedFact ;
+    rbo:evidenceQuote "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Genre_funk_30ec1e5ee8 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_38380a2b87afc47da03b3dad3c39f5040870742d a res:ExtractedFact ;
+    rbo:evidenceQuote "Olivia Newton-John released a version in 1971 and her recording reached No. 1 in Australia and No. 6 in the UK." ;
+    rbo:extractedFrom res:TextSource_72472625056c3ae9e987fac2caaf169da9e0da7f ;
+    rdf:object res:Artist_10ccb5d8-f9d5-4954-9441-3419b522a214 ;
+    rdf:predicate rbo:collaboratedWith ;
+    rdf:subject res:Artist_2052937a-48e8-4c0f-ab2f-79a75137d304 .
+
+res:ExtractedFact_3ba7a919a1a2b741ade3431c3a7e60335614bde0 a res:ExtractedFact ;
+    rbo:evidenceQuote "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Genre_electro_b4d21f8747 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_3f64c73eee98ec5dc284f6ad48a1404aa5d77263 a res:ExtractedFact ;
+    rbo:evidenceQuote "Alicia Vanden Heuvel, (bass, vocals, piano, multi-instrumentalist)" ;
+    rbo:extractedFrom res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc ;
+    rdf:object res:Instrument_bass_62abc4b478 ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c .
+
+res:ExtractedFact_40fd3ab325e7a9ae141b924d8c91c267930657ff a res:ExtractedFact ;
+    rbo:evidenceQuote "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Genre_breakbeat_cd1d5f30b4 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_4c651beebcd640392bc7f9f5e0546d047637756e a res:ExtractedFact ;
+    rbo:evidenceQuote "they were signed to Dogday Records" ;
+    rbo:extractedFrom res:TextSource_cdb3896a38e856d54c602c6333994db53612f913 ;
+    rdf:object res:ExternalPerson_dogday_records_7c6914384c ;
+    rdf:predicate rbo:producedBy ;
+    rdf:subject res:Artist_d998c613-a715-48b9-87a3-df7598056f8c .
+
+res:ExtractedFact_4de066314692397d638a60a3412e3aaa230fd51d a res:ExtractedFact ;
+    rbo:evidenceQuote "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Genre_drum_and_bass_802699bbf6 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_52df517471e823c87faf7965f0404d85704c128e a res:ExtractedFact ;
+    rbo:evidenceQuote "Jim Semonik on keyboards" ;
+    rbo:extractedFrom res:TextSource_b27056260be7a103909c41ca66f12f1442eb1961 ;
+    rdf:object res:Instrument_keyboards_b17360fafa ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_836d8ab6-8f06-4d92-ba15-93c62770765b .
+
+res:ExtractedFact_68155cc22b7848919cc9514b126f090599ed0a89 a res:ExtractedFact ;
+    rbo:evidenceQuote "The Aislers Set is an American indie pop band" ;
+    rbo:extractedFrom res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc ;
+    rdf:object res:Genre_indie_pop_93604d928b ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c .
+
+res:ExtractedFact_6ce957db58935b0459e22fb4964c6f06e9154592 a res:ExtractedFact ;
+    rbo:evidenceQuote "It was formed in 1989 as a death metal band but changed to symphonic black metal." ;
+    rbo:extractedFrom res:TextSource_072e7167bcbbec18d155425ace15e9119776a7a8 ;
+    rdf:object res:Genre_death_metal_7837011ccd ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_284460fc-c58a-4214-b81c-299a66bbd786 .
+
+res:ExtractedFact_7ddca640825b42fdac730f6ffae2df7ecb1729d5 a res:ExtractedFact ;
+    rbo:evidenceQuote "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Genre_soul_0867322e7c ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_7e4523ae4ed2594d0eb70478485aec3538cc5e13 a res:ExtractedFact ;
+    rbo:evidenceQuote "Jen Cohen (organ)" ;
+    rbo:extractedFrom res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc ;
+    rdf:object res:Instrument_organ_1c5ce0dbf9 ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c .
+
+res:ExtractedFact_7f95c494b1cc9a69ce95a5de0f594eb7e761226c a res:ExtractedFact ;
+    rbo:evidenceQuote "The Aislers Set's music is often interpreted as adjacent to C86-style British indie pop" ;
+    rbo:extractedFrom res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc ;
+    rdf:object res:Genre_c86_style_british_indie_pop_0e956fdba3 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c .
+
+res:ExtractedFact_82c133bd09902d6e34b896ec0268081c07370e2c a res:ExtractedFact ;
+    rbo:evidenceQuote "Jim Semonik on keyboards" ;
+    rbo:extractedFrom res:TextSource_b27056260be7a103909c41ca66f12f1442eb1961 ;
+    rdf:object res:Instrument_keyboards_b17360fafa ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_76b80114-3d45-422a-8b2a-e58622442f87 .
+
+res:ExtractedFact_83cd247ced94799eaa98165d0517e81caadbb42c a res:ExtractedFact ;
+    rbo:evidenceQuote "13 Stories is an Atlanta, Georgia based pop-band." ;
+    rbo:extractedFrom res:TextSource_30c21a3457c0f7902d0be3fc9bf61e0ab12eee73 ;
+    rdf:object res:Genre_pop_4f197c99a7 ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_c7092c54-2774-415b-81dd-792031999fce .
+
+res:ExtractedFact_84ec5a689056f14e776e752ca0caeb5def5d91ce a res:ExtractedFact ;
+    rbo:evidenceQuote "AV Linton (guitar, vocals, multi-instrumentalist)" ;
+    rbo:extractedFrom res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc ;
+    rdf:object res:Instrument_guitar_22942b7c5c ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c .
+
+res:ExtractedFact_85f6105a038f4190aa556e39864394f9ee86591f a res:ExtractedFact ;
+    rbo:evidenceQuote "It was formed in 1989 as a death metal band but changed to symphonic black metal." ;
+    rbo:extractedFrom res:TextSource_072e7167bcbbec18d155425ace15e9119776a7a8 ;
+    rdf:object res:Genre_symphonic_black_metal_beb0d5e8b7 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_284460fc-c58a-4214-b81c-299a66bbd786 .
+
+res:ExtractedFact_876867520970f29b453a1db4bc33f98de6a30f5d a res:ExtractedFact ;
+    rbo:evidenceQuote "drums are by Max." ;
+    rbo:extractedFrom res:TextSource_30c21a3457c0f7902d0be3fc9bf61e0ab12eee73 ;
+    rdf:object res:Instrument_drums_8aaee0548e ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_c7092c54-2774-415b-81dd-792031999fce .
+
+res:ExtractedFact_8aae6a011e2370cd7c4f18dc6aa83369226ad861 a res:ExtractedFact ;
+    rbo:evidenceQuote "'Til Tuesday was an American new wave band formed in Boston, Massachusetts, United States." ;
+    rbo:extractedFrom res:TextSource_e7e5e0e3954c5c23f8b7624d161cf8eaedf1dd42 ;
+    rdf:object res:Genre_new_wave_6d150cec97 ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_8cf8869d-e066-4c94-b734-fe05749badf0 .
+
+res:ExtractedFact_8f85c1bc4726b55c73981ca03a27b9e7518c0153 a res:ExtractedFact ;
+    rbo:evidenceQuote "they drew influences from other genres including rock, funk, soul, electro, drum and bass, electro jazz and breakbeat." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Genre_rock_38464bf083 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_98db68ff802ae7830e93ba871ae506e11a1998d3 a res:ExtractedFact ;
+    rbo:evidenceQuote "The group pioneered the gothic country genre by mixing country rock with traditional bluegrass, gospel and Appalachian instrumentation." ;
+    rbo:extractedFrom res:TextSource_eef179c03b824ebf4ba467dcf1998b6e5c6c1e4e ;
+    rdf:object res:Genre_gothic_country_d7fb5ee7e3 ;
+    rdf:predicate rbo:influencedByGenre ;
+    rdf:subject res:Artist_9a22fc7b-ad7f-4c70-9e0f-4d40cd7562cd .
+
+res:ExtractedFact_99039665599c37402069f92878eef8785e52a51c a res:ExtractedFact ;
+    rbo:evidenceQuote "consisting of guitarist Jon Hills" ;
+    rbo:extractedFrom res:TextSource_8463868964b6c67dda7180e0e68120797cd0dbd7 ;
+    rdf:object res:Instrument_guitar_22942b7c5c ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_b0d6108a-3dd5-479d-b518-803f54b3ba45 .
+
+res:ExtractedFact_a30586cb29cd73b7567b7f4a436048282caf8cbc a res:ExtractedFact ;
+    rbo:evidenceQuote "GMS founded Spun Records in 1999, the first psychedelic trance label in the United States and Ibiza, Spain." ;
+    rbo:extractedFrom res:TextSource_f9f7ddbce63e79dc1ed277726bc65c87cd670ac3 ;
+    rdf:object res:ExternalPerson_spun_records_ffd788de7f ;
+    rdf:predicate rbo:producedBy ;
+    rdf:subject res:Artist_bf346e67-b4b1-41c0-bcc7-a8f4df4fbbbb .
+
+res:ExtractedFact_a33a854b6c3d9d68dea1e60a502a1be8e076e616 a res:ExtractedFact ;
+    rbo:evidenceQuote "is an American country rock band from Denver, Colorado." ;
+    rbo:extractedFrom res:TextSource_eef179c03b824ebf4ba467dcf1998b6e5c6c1e4e ;
+    rdf:object res:Genre_country_rock_83ac283371 ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_9a22fc7b-ad7f-4c70-9e0f-4d40cd7562cd .
+
+res:ExtractedFact_ad0f4a030d701495a2d06e20c209975166e33f6c a res:ExtractedFact ;
+    rbo:evidenceQuote "They briefly tracked with second producer Mike Green in Los Angeles, California." ;
+    rbo:extractedFrom res:TextSource_e56bca366daf6622325436b7470f10cf50cb3971 ;
+    rdf:object res:ExternalPerson_mike_green_687f6866d2 ;
+    rdf:predicate rbo:producedBy ;
+    rdf:subject res:Artist_03da4d85-8786-4814-8118-6849dc5232da .
+
+res:ExtractedFact_b68f10cdd9ef1281ffb390844b77e43c2a6662f3 a res:ExtractedFact ;
+    rbo:evidenceQuote "The band, consisting of Aimee Mann (lead vocals, bass)" ;
+    rbo:extractedFrom res:TextSource_e7e5e0e3954c5c23f8b7624d161cf8eaedf1dd42 ;
+    rdf:object res:Instrument_bass_62abc4b478 ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_8cf8869d-e066-4c94-b734-fe05749badf0 .
+
+res:ExtractedFact_b93ce1c671711afe2642688e1c76f04fe93e1e27 a res:ExtractedFact ;
+    rbo:evidenceQuote "drummer Jean-Yves Tola." ;
+    rbo:extractedFrom res:TextSource_eef179c03b824ebf4ba467dcf1998b6e5c6c1e4e ;
+    rdf:object res:Instrument_drums_8aaee0548e ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_9a22fc7b-ad7f-4c70-9e0f-4d40cd7562cd .
+
+res:ExtractedFact_ba719ba6fc2d3b9adafeebb44fd89c6722e3c2c4 a res:ExtractedFact ;
+    rbo:evidenceQuote "The song was first recorded by country musicians such as Clarence Horton Greene in 1927, and has been performed by many country and folk singers since." ;
+    rbo:extractedFrom res:TextSource_72472625056c3ae9e987fac2caaf169da9e0da7f ;
+    rdf:object res:Genre_country_8e68b3e5af ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_2052937a-48e8-4c0f-ab2f-79a75137d304 .
+
+res:ExtractedFact_bda13ec156b853f0fe54073c7191ba4d9cc36dba a res:ExtractedFact ;
+    rbo:evidenceQuote "Burning at Both Ends is the third studio album by American pop punk band Set Your Goals." ;
+    rbo:extractedFrom res:TextSource_e56bca366daf6622325436b7470f10cf50cb3971 ;
+    rdf:object res:Genre_pop_punk_9d0771fe0b ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_03da4d85-8786-4814-8118-6849dc5232da .
+
+res:ExtractedFact_c7931ebe5ce7060d7c89d2674b90bc231dd4d7d8 a res:ExtractedFact ;
+    rbo:evidenceQuote "Wyatt Cusick (guitar, vocals, multi-instrumentalist)" ;
+    rbo:extractedFrom res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc ;
+    rdf:object res:Instrument_guitar_22942b7c5c ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c .
+
+res:ExtractedFact_d656eee00d9199fcc91c6c67674bba5ec4c59a83 a res:ExtractedFact ;
+    rbo:evidenceQuote "GMS won the Psy-Trance award twice (in 2001 and 2009) at the DJ Awards in Ibiza, Spain." ;
+    rbo:extractedFrom res:TextSource_f9f7ddbce63e79dc1ed277726bc65c87cd670ac3 ;
+    rdf:object res:Genre_psy_trance_d5c2be7f64 ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_bf346e67-b4b1-41c0-bcc7-a8f4df4fbbbb .
+
+res:ExtractedFact_d945f50ba6675ab572114eee46c481db8194529f a res:ExtractedFact ;
+    rbo:evidenceQuote "Yoshi Nakamoto (drums)" ;
+    rbo:extractedFrom res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc ;
+    rdf:object res:Instrument_drums_8aaee0548e ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c .
+
+res:ExtractedFact_d966693edc0109512feb9f56640a5bf0eba4d739 a res:ExtractedFact ;
+    rbo:evidenceQuote "Kemstar (DJ Peril's brother, Simon Foretti) as lead guitarist." ;
+    rbo:extractedFrom res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec ;
+    rdf:object res:Instrument_guitar_22942b7c5c ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 .
+
+res:ExtractedFact_ee5c71dff2a22165f44e7828b51e45d7205d9e2c a res:ExtractedFact ;
+    rbo:evidenceQuote "GMS (also known as the Growling Mad Scientists) are a Dutch psychedelic trance duo" ;
+    rbo:extractedFrom res:TextSource_f9f7ddbce63e79dc1ed277726bc65c87cd670ac3 ;
+    rdf:object res:Genre_psychedelic_trance_9db4ed019b ;
+    rdf:predicate rbo:associatedWithGenre ;
+    rdf:subject res:Artist_bf346e67-b4b1-41c0-bcc7-a8f4df4fbbbb .
+
+res:ExtractedFact_f41d82693c3b6745208a567bbd23aa26b8d037f4 a res:ExtractedFact ;
+    rbo:evidenceQuote "Rafael Cohen (bass/various electronic devices)" ;
+    rbo:extractedFrom res:TextSource_0be945816d796282799f848341ad620a4e99a4c6 ;
+    rdf:object res:Instrument_bass_62abc4b478 ;
+    rdf:predicate rbo:playsInstrument ;
+    rdf:subject res:Artist_f26c72d3-e52c-467b-b651-679c73d8e1a7 .
+
+res:TextSource_016e41ddbc02386233b6f969a63a01d2bc316b50 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/12_Stones"^^xsd:anyURI .
+
+res:TextSource_045cbe5ef90343c602928f1b36dd868afd26e0ef a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/%27t_Hof_van_Commerce"^^xsd:anyURI .
+
+res:TextSource_05a81e81deb5e3813375eb03d85448b730ac4a41 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/18th_Dye"^^xsd:anyURI .
+
+res:TextSource_07e069368ce50775a1292097b41c44bf865ac07c a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/112"^^xsd:anyURI .
+
+res:TextSource_105eccb872ce0069548b75600810bad5e2225d97 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/12012"^^xsd:anyURI .
+
+res:TextSource_10ef062c583a08a044476e8cbdca1429e7d79d35 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/15_Minutes"^^xsd:anyURI .
+
+res:TextSource_13330f4c57c71a1a8f547b9ccc55b69a19872d08 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/113"^^xsd:anyURI .
+
+res:TextSource_139f5f8b779710bb473a1d6a62d4467eb8496371 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Atlanta_Falcons"^^xsd:anyURI .
+
+res:TextSource_26607e0b572ec08cd29ede45ec9f628d5c94a791 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/151"^^xsd:anyURI .
+
+res:TextSource_2cc0cd0bb72f485b5433ece8748dc3defe03ea1a a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/...And_You_Will_Know_Us_by_the_Trail_of_Dead"^^xsd:anyURI .
+
+res:TextSource_4facf08c539cf831d75c742ad4442c5591ca2d20 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Anjunabeats"^^xsd:anyURI .
+
+res:TextSource_567da1db3872784440ba70812180f48d406472c6 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/*shels"^^xsd:anyURI .
+
+res:TextSource_638f0ee017b4307debf231de830e467811a4667c a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Plus_and_minus_signs"^^xsd:anyURI .
+
+res:TextSource_63c1927cf0db3f790c93cc74dee644e610e7b507 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Cat"^^xsd:anyURI .
+
+res:TextSource_65ba0153a5d7da210ffe2a994a57a5257e44f095 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/108"^^xsd:anyURI .
+
+res:TextSource_65d2d22431ecdcb1a815194848e4eebd3e8a947f a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Gauge_(firearms)"^^xsd:anyURI .
+
+res:TextSource_6fe68445c3c9f6f1cb9013eac1a0042980ab9355 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/17_Hippies"^^xsd:anyURI .
+
+res:TextSource_717b5011eb68ec4b2811503b2e3d859703071a72 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/%2768_Comeback"^^xsd:anyURI .
+
+res:TextSource_71e06dcb6650773fbbb654f6d20d09c4aadad4bb a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom"^^xsd:anyURI .
+
+res:TextSource_86ae44a735311511cff09cc70e65b668d04984e6 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/1208"^^xsd:anyURI .
+
+res:TextSource_9ee2b809414dd7a2c0ecd86dc28c9d067633f763 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Clock_chime"^^xsd:anyURI .
+
+res:TextSource_9fff0d2a9b521e32e402056bb699628b68cb4f6e a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/10,000_Maniacs"^^xsd:anyURI .
+
+res:TextSource_a0d932da84a6ea928366019dda10757ab680b1cc a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/10_years"^^xsd:anyURI .
+
+res:TextSource_aed2841defa7dc8e21c9593ca0d62c2a3bbf0559 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/The_120_Days_of_Sodom"^^xsd:anyURI .
+
+res:TextSource_c233bedd5e6428573ddbc4daf21f31aecb1a2f29 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Mexico"^^xsd:anyURI .
+
+res:TextSource_cf80676726ec81167379773b82afb260e818d28d a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Eco"^^xsd:anyURI .
+
+res:TextSource_d21179681191ad587f0ab564578f29d5da93715c a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Drop_(film)"^^xsd:anyURI .
+
+res:TextSource_d398c4e9afcce03bd2622a943fceb7f10a704a71 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/On_Tiptoes"^^xsd:anyURI .
+
+res:TextSource_e61b3d301a039beb0a8a497ef2253d8608681e97 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/1349"^^xsd:anyURI .
+
+res:TextSource_f1e8e7a48ebfb2e97355912443c9e89b38b7cae3 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Hello"^^xsd:anyURI .
+
+res:TextSource_f6b92f4dcfd0e4097e996266709171fe5472b6c4 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/The_Frames"^^xsd:anyURI .
+
+res:TextSource_fd30d224ecf7f515364d459a0848e53e37a4319f a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/101_Strings"^^xsd:anyURI .
+
+res:Artist_2fc659fa-293f-4288-bff5-29447f31f628 rbo:associatedWithGenre res:Genre_fusion_f7e6fdf149 .
+
+res:Artist_76b80114-3d45-422a-8b2a-e58622442f87 rbo:playsInstrument res:Instrument_keyboards_b17360fafa .
+
+res:Artist_b0d6108a-3dd5-479d-b518-803f54b3ba45 rbo:playsInstrument res:Instrument_guitar_22942b7c5c .
+
+res:Artist_f37c537b-3557-4031-bfd6-ab63ced32854 rbo:producedBy res:ExternalPerson_eric_stewart_56679c1ab0 .
+
+res:TextSource_8463868964b6c67dda7180e0e68120797cd0dbd7 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/1_Mile_North"^^xsd:anyURI .
+
+res:TextSource_94e68ae0c975210ca568d45b97a1b627db492622 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/10cc"^^xsd:anyURI .
+
+res:TextSource_d21eca1142c27987f2dcbdfdc95d5bbdcb544abf a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Lars_Taylor"^^xsd:anyURI .
+
+res:Artist_03da4d85-8786-4814-8118-6849dc5232da rbo:associatedWithGenre res:Genre_pop_punk_9d0771fe0b ;
+    rbo:producedBy res:ExternalPerson_mike_green_687f6866d2 .
+
+res:Artist_2052937a-48e8-4c0f-ab2f-79a75137d304 rbo:associatedWithGenre res:Genre_country_8e68b3e5af ;
+    rbo:collaboratedWith res:Artist_10ccb5d8-f9d5-4954-9441-3419b522a214 .
+
+res:Artist_8cf8869d-e066-4c94-b734-fe05749badf0 rbo:associatedWithGenre res:Genre_new_wave_6d150cec97 ;
+    rbo:playsInstrument res:Instrument_bass_62abc4b478 .
+
+res:Artist_c7092c54-2774-415b-81dd-792031999fce rbo:associatedWithGenre res:Genre_pop_4f197c99a7 ;
+    rbo:playsInstrument res:Instrument_drums_8aaee0548e .
+
+res:Artist_d998c613-a715-48b9-87a3-df7598056f8c rbo:associatedWithGenre res:Genre_hip_hop_1ab40b9589 ;
+    rbo:producedBy res:ExternalPerson_dogday_records_7c6914384c .
+
+res:ExternalPerson_dogday_records_7c6914384c a res:Person ;
+    rdfs:label "Dogday Records"@en .
+
+res:ExternalPerson_eric_stewart_56679c1ab0 a res:Person ;
+    rdfs:label "Eric Stewart"@en .
+
+res:ExternalPerson_mike_green_687f6866d2 a res:Person ;
+    rdfs:label "Mike Green"@en .
+
+res:ExternalPerson_spun_records_ffd788de7f a res:Person ;
+    rdfs:label "Spun Records"@en .
+
+res:ExternalPerson_starbox_music_e9c69214a0 a res:Person ;
+    rdfs:label "Starbox Music"@en .
+
+res:Genre_breakbeat_cd1d5f30b4 a res:Genre ;
+    rdfs:label "breakbeat"@en .
+
+res:Genre_c86_style_british_indie_pop_0e956fdba3 a res:Genre ;
+    rdfs:label "C86-style British indie pop"@en .
+
+res:Genre_country_8e68b3e5af a res:Genre ;
+    rdfs:label "country"@en .
+
+res:Genre_country_rock_83ac283371 a res:Genre ;
+    rdfs:label "country rock"@en .
+
+res:Genre_death_metal_7837011ccd a res:Genre ;
+    rdfs:label "death metal"@en .
+
+res:Genre_drum_and_bass_802699bbf6 a res:Genre ;
+    rdfs:label "drum and bass"@en .
+
+res:Genre_electro_b4d21f8747 a res:Genre ;
+    rdfs:label "electro"@en .
+
+res:Genre_electro_jazz_26cfbf0c56 a res:Genre ;
+    rdfs:label "electro jazz"@en .
+
+res:Genre_funk_30ec1e5ee8 a res:Genre ;
+    rdfs:label "funk"@en .
+
+res:Genre_fusion_f7e6fdf149 a res:Genre ;
+    rdfs:label "fusion"@en .
+
+res:Genre_gothic_country_d7fb5ee7e3 a res:Genre ;
+    rdfs:label "gothic country"@en .
+
+res:Genre_hip_hop_1ab40b9589 a res:Genre ;
+    rdfs:label "hip hop"@en .
+
+res:Genre_indie_pop_93604d928b a res:Genre ;
+    rdfs:label "indie pop"@en .
+
+res:Genre_industrial_d09675fce8 a res:Genre ;
+    rdfs:label "industrial"@en .
+
+res:Genre_metal_4963bb0591 a res:Genre ;
+    rdfs:label "metal"@en .
+
+res:Genre_new_wave_6d150cec97 a res:Genre ;
+    rdfs:label "new wave"@en .
+
+res:Genre_pop_4f197c99a7 a res:Genre ;
+    rdfs:label "pop"@en .
+
+res:Genre_pop_punk_9d0771fe0b a res:Genre ;
+    rdfs:label "pop punk"@en .
+
+res:Genre_psy_trance_d5c2be7f64 a res:Genre ;
+    rdfs:label "Psy-Trance"@en .
+
+res:Genre_psychedelic_trance_9db4ed019b a res:Genre ;
+    rdfs:label "psychedelic trance"@en .
+
+res:Genre_rock_38464bf083 a res:Genre ;
+    rdfs:label "rock"@en .
+
+res:Genre_soul_0867322e7c a res:Genre ;
+    rdfs:label "soul"@en .
+
+res:Genre_symphonic_black_metal_beb0d5e8b7 a res:Genre ;
+    rdfs:label "symphonic black metal"@en .
+
+res:Instrument_guitars_0c347a5017 a res:Instrument ;
+    rdfs:label "guitars"@en .
+
+res:Instrument_organ_1c5ce0dbf9 a res:Instrument ;
+    rdfs:label "organ"@en .
+
+res:TextSource_30c21a3457c0f7902d0be3fc9bf61e0ab12eee73 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/13_Stories"^^xsd:anyURI .
+
+res:TextSource_72472625056c3ae9e987fac2caaf169da9e0da7f a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Banks_of_the_Ohio"^^xsd:anyURI .
+
+res:TextSource_cdb3896a38e856d54c602c6333994db53612f913 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/11/5"^^xsd:anyURI .
+
+res:TextSource_e56bca366daf6622325436b7470f10cf50cb3971 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/Burning_at_Both_Ends"^^xsd:anyURI .
+
+res:TextSource_e7e5e0e3954c5c23f8b7624d161cf8eaedf1dd42 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/%27Til_Tuesday"^^xsd:anyURI .
+
+res:Artist_836d8ab6-8f06-4d92-ba15-93c62770765b rbo:playsInstrument res:Instrument_drums_8aaee0548e,
+        res:Instrument_guitars_0c347a5017,
+        res:Instrument_keyboards_b17360fafa .
+
+res:Artist_f26c72d3-e52c-467b-b651-679c73d8e1a7 rbo:playsInstrument res:Instrument_bass_62abc4b478,
+        res:Instrument_drums_8aaee0548e,
+        res:Instrument_guitar_22942b7c5c .
+
+res:TextSource_0be945816d796282799f848341ad620a4e99a4c6 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/!!!"^^xsd:anyURI .
+
+res:Artist_284460fc-c58a-4214-b81c-299a66bbd786 rbo:associatedWithGenre res:Genre_metal_4963bb0591 ;
+    rbo:influencedByGenre res:Genre_death_metal_7837011ccd,
+        res:Genre_industrial_d09675fce8,
+        res:Genre_symphonic_black_metal_beb0d5e8b7 .
+
+res:Artist_9a22fc7b-ad7f-4c70-9e0f-4d40cd7562cd rbo:associatedWithGenre res:Genre_country_rock_83ac283371 ;
+    rbo:influencedByGenre res:Genre_gothic_country_d7fb5ee7e3 ;
+    rbo:playsInstrument res:Instrument_bass_62abc4b478,
+        res:Instrument_drums_8aaee0548e .
+
+res:Artist_bf346e67-b4b1-41c0-bcc7-a8f4df4fbbbb rbo:associatedWithGenre res:Genre_psy_trance_d5c2be7f64,
+        res:Genre_psychedelic_trance_9db4ed019b ;
+    rbo:producedBy res:ExternalPerson_spun_records_ffd788de7f,
+        res:ExternalPerson_starbox_music_e9c69214a0 .
+
+res:Instrument_keyboards_b17360fafa a res:Instrument ;
+    rdfs:label "keyboards"@en .
+
+res:TextSource_072e7167bcbbec18d155425ace15e9119776a7a8 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/...And_Oceans"^^xsd:anyURI .
+
+res:TextSource_b27056260be7a103909c41ca66f12f1442eb1961 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/16volt"^^xsd:anyURI .
+
+res:TextSource_eef179c03b824ebf4ba467dcf1998b6e5c6c1e4e a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/16_Horsepower"^^xsd:anyURI .
+
+res:TextSource_f9f7ddbce63e79dc1ed277726bc65c87cd670ac3 a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/GMS_(duo)"^^xsd:anyURI .
+
+res:Artist_8ab0741e-f59a-455c-98a3-21d1fbb6530c rbo:associatedWithGenre res:Genre_indie_pop_93604d928b ;
+    rbo:influencedByGenre res:Genre_c86_style_british_indie_pop_0e956fdba3 ;
+    rbo:playsInstrument res:Instrument_bass_62abc4b478,
+        res:Instrument_drums_8aaee0548e,
+        res:Instrument_guitar_22942b7c5c,
+        res:Instrument_organ_1c5ce0dbf9 .
+
+res:TextSource_0c44595896751d938e1facc5b6f14a7d4ccddcfc a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/The_Aislers_Set"^^xsd:anyURI .
+
+res:Artist_e89b06b0-310d-4448-9376-e2ec56e17145 rbo:influencedByGenre res:Genre_breakbeat_cd1d5f30b4,
+        res:Genre_drum_and_bass_802699bbf6,
+        res:Genre_electro_b4d21f8747,
+        res:Genre_electro_jazz_26cfbf0c56,
+        res:Genre_funk_30ec1e5ee8,
+        res:Genre_rock_38464bf083,
+        res:Genre_soul_0867322e7c ;
+    rbo:playsInstrument res:Instrument_guitar_22942b7c5c .
+
+res:Instrument_bass_62abc4b478 a res:Instrument ;
+    rdfs:label "bass"@en .
+
+res:TextSource_7391be9658cf11a1b89b5cfd678450ed02d1e9ec a res:TextSource ;
+    rbo:sourceUrl "https://en.wikipedia.org/wiki/1200_Techniques"^^xsd:anyURI .
+
+res:Instrument_guitar_22942b7c5c a res:Instrument ;
+    rdfs:label "guitar"@en .
+
+res:Instrument_drums_8aaee0548e a res:Instrument ;
+    rdfs:label "drums"@en .
+
