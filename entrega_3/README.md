@@ -189,29 +189,6 @@ Otros resultados:
 Notebook: `notebooks/04_ranking_recomendaciones.ipynb`. Requiere los puntos 1 a 3. La generación de candidatos se importa
 de `src/recomendador_grafo.py`, que empaqueta el código del notebook 03.
 
-### Metodología (dos etapas)
-
-1. **Candidatos:** las 200 canciones con mayor Personalized PageRank para la preferencia (punto 3).
-2. **Puntaje final:** `score = w_G·G + w_V·V + w_A·A + w_E·E`, con cada señal escalada min-max dentro de los
-   candidatos. Después se aplica la regla de diversidad (máximo 2 canciones por artista) y se toma el **Top-K**.
-
-| Señal | Definición | Fuente |
-|---|---|---|
-| **G** | `log(PPR)` | Grafo (punto 3) |
-| **V** | Promedio bayesiano (`K = 2`, μ = 4,07) de las valoraciones de las reseñas que alcanzan la canción. Usa estrellas explícitas o, si no hay, estrellas estimadas desde el texto con una ridge sobre los embeddings (confianza 0,5). Validación cruzada: Spearman 0,42, MAE 0,71 frente a 0,77 de predecir la media | Reseñas (punto 2) |
-| **A** | Coseno entre el perfil de la preferencia (reseñas del usuario o de las semillas, o el texto de la consulta) y las reseñas del candidato. Validada como señal de relevancia: AUC 0,67 al distinguir pares `SIMILAR_TO` de pares al azar | Embeddings (punto 2) |
-| **E** | 1 si el candidato está en la comunidad Louvain principal de la preferencia | Grafo (punto 3) |
-
-### Selección de los pesos
-
-- **Búsqueda:** rejilla sobre el simplex (paso 0,1, `w_G ≥ 0,1`; 220 combinaciones).
-- **Casos:** los de ocultamiento del punto 3 (200 canciones y 139 usuarios), divididos en validación y prueba.
-- **Regla:** **máximo respaldo de preferencias `Q` sin perder relevancia (`R ≥ 1`)** frente al ranking que usa solo
-  el grafo.
-  - `Q` es la fracción del Top-10 formada por canciones con reseñas de valoración ≥ μ.
-  - `R` es el recall@10/@50 relativo.
-- **Pesos elegidos:** `G = 0,2`, `V = 0,1`, `A = 0,7`, `E = 0`. Se guardan en `data/ranking_config.json`, que usa el sistema del punto 5.
-
 Resultados en **prueba**:
 
 | Variante | Pesos (G, V, A, E) | recall@10 | recall@50 | Q (respaldo) | Top-10 con reseñas |
